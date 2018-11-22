@@ -1,0 +1,230 @@
+swiper-item image{
+  width: 100%;
+  height: 340rpx;
+}
+.search{
+  margin-top: 20rpx;
+  height: 74rpx;
+  padding-bottom: 20rpx;
+}
+.seach-bar{
+  width:402rpx;
+  height: 30rpx;
+  margin: 0 auto; 
+}
+.weui-search-bar__form{
+  border-radius:15px
+}
+.center{
+  padding: 0 57rpx 20rpx 57rpx;
+  width: 636rpx;
+  margin-top: 20rpx;
+  
+}
+.icon{
+  width:120rpx;
+}
+.icon image{
+  width:120rpx;
+  height: 120rpx;
+}
+.section{
+  width: 636rpx;
+  height: 216rpx;
+  border-radius: 5%;
+  background: white;
+  margin-top: 20rpx;
+  font-size: 14px;
+  display: flex;
+}
+.sections1{
+  width: 312rpx;
+  height:216rpx;
+  border-right: 1px black solid;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.zhon{
+  text-align: center;
+}
+.sections2{
+  width: 128rpx;
+  height:216rpx;
+ border-right: 1px black solid;
+ box-sizing: border-box;
+   padding-top:10rpx;
+}
+.sections3{
+  width: 200rpx;
+    padding-top:10rpx;
+}
+.sections image{
+  width: 76rpx;
+  height: 124rpx;
+}
+.sections text{
+   display: block
+}
+.money{
+  width: 184rpx;
+  height: 68rpx;
+  background: blueviolet;
+  font-size: 12px;
+}
+.money2{
+  border-left: 1px white dashed;
+  box-sizing: border-box;
+}
+.zy{
+  margin-left: 20rpx;
+}
+.money1 text{
+  display: inline-block;
+  text-align: center;
+  line-height: 68rpx;
+}
+.es{
+  color: white;
+}
+.rmb{
+  color: white;
+  position: relative;
+  top: -5rpx
+}
+.money1s{
+  font-weight: bold
+}
+.sectio{
+  padding-top: 20rpx;
+  flex-direction:column;
+  height: 260rpx;
+}
+.sectio image{
+  width: 22px;
+  height: 86px
+}
+.zsq{
+  color: red
+}
+.tit{
+  color:gray
+}
+.qiang{
+  display: flex;
+  font-size: 16rpx;
+  text-align:center
+}
+.qiang text{
+  display: block
+}
+.shijian{
+  display: flex;
+  line-height: 25rpx;
+}
+.sj{
+  width: 25rpx;
+  height:25rpx;
+  background: black;
+  color: white;
+}
+.tu{
+  display: flex;
+  flex-direction:column;
+ align-items: center
+}
+.t_tit{
+  color: plum;
+  font-size: 16px;
+}
+.big{
+  display:flex;
+  justify-content: space-around;
+  padding-top: 10rpx
+}
+.t_mon{
+  font-size: 16rpx;
+  text-decoration: line-through;
+  margin-left: -35rpx
+}
+.ss{
+  width: 596rpx;
+  padding:0 20rpx 0 20rpx;
+  height:270rpx;
+  font-size: 8px
+}
+.ss image{
+  width: 108rpx;
+  height: 108rpx;
+}
+.hh{
+  width: 151rpx;
+  height: 50rpx;
+  background: lightgray;
+  color: red;
+  text-align: center;
+  line-height: 50rpx
+}
+.s-tit{
+  color: blueviolet;
+  font-size: 15px
+}
+.s-tit1{
+  font-size:10px
+}
+.lq{
+  font-size: 15px;
+  color: pink
+}
+.mt{
+  margin-top: 10rpx
+}
+.tj{
+  margin-top: 20rpx;
+  padding-top:15rpx;
+  background: white
+}
+.xian{
+ width: 275rpx;
+  height:48rpx;
+}
+.xian view{
+  height: 1rpx;
+  background: black;
+  position: relative;
+  top: 50%;
+}
+.kua{
+  width: 200rpx;
+  height:48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 16px;
+  font-weight: bold
+}
+.tp image{
+  width: 750rpx;
+  height:340rpx;
+}
+.t-title text{
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+}
+.t-title text:nth-child(1){
+  margin-left: 280rpx
+}
+.t-title text:nth-child(2){
+  margin-left: 300rpx
+}
+.biggest{
+  padding:0 20rpx 20rpx 20rpx
+}
+.img1{
+  width: 340rpx;
+  height: 330rpx;
+}
+.b-big{
+  margin-top: 20rpx;
+}

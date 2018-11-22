@@ -1,0 +1,5 @@
+{"usingComponents": {
+    "zan-search": "/packages/search/index"
+  },
+  "navigationBarTitleText": "商品分类"
+  }

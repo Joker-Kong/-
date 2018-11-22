@@ -1,0 +1,23 @@
+<view class="contain  flex">
+<view class='c-left' >
+  <image src='../../img/a1.jpg'></image>
+</view>
+<view class='c-right'>
+  <text>新的好用的护肤神器曲面如</text>
+  <text>￥148.00-158.00</text>
+  <view class='btns flex'>
+  <text class='btn'>结算</text>
+  <text class='btn'>移除</text>
+
+  </view>
+</view>
+</view>
+<view class='cnxh '>
+   <image src='../../img/t1.png'></image>
+   <text>猜你喜欢</text>
+</view>
+<view class='biggest flex'>
+  <view class='flex3 small b-big'><image src='../../img/a1.jpg'></image><text>护舒宝</text><text>15.00</text></view>
+  <view class='flex3 small b-big'><image src='../../img/a1.jpg'></image><text>打包sod密</text><text>50.00</text></view>
+</view>
+

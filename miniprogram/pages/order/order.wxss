@@ -1,0 +1,40 @@
+.head{
+  width: 100%;
+  height: 400rpx;
+}
+.big{
+  padding-top: 20rpx;
+  margin-top: 20rpx;
+}
+.tj{
+  width:122rpx;
+  height: 36rpx;
+  background:#e88242;
+  font-size: 13px;
+  color: white;
+  border-radius: 50rpx;
+  text-align: center
+}
+.foot{
+ font-size: 14px;
+ display:flex;
+ padding-left: 47.5%;
+}
+.an{
+  width: 184rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  margin-left: 20rpx;
+}
+.money{
+  color: red
+}
+.hh{
+  text-align: right
+}
+.xx{
+  margin-top: 20rpx;
+}
+.tits{
+  text-align: right
+}

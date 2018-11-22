@@ -1,0 +1,27 @@
+<view class="avatar cen">
+   <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+    <navigator class='cell-item arrow' url='../order/order'>
+        <text>我的订单</text>
+    </navigator>
+    <navigator class='cell-item arrow'>
+        <text>我的优惠券</text>
+    </navigator>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+    <navigator class='cell-item arrow' url='../address/address'>
+        <text>我的地址</text>
+    </navigator>
+    <navigator class='cell-item arrow'>
+        <text>我的收藏</text>
+    </navigator>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <text>联系客服</text>
+    </navigator>
+</view>

@@ -1,0 +1,178 @@
+<zan-search
+      placeholder="搜索..."
+      searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};"
+      inputStyle="height: 56rpx; border-radius: 8rpx;"
+      bindtap="onSearch"
+    />
+<!-- 轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='center flex'>
+  <view class='icon jh'>
+    <image src='../../img/a1.jpg'></image>
+    <text>热销榜</text>
+  </view>
+  <view class='icon jh'>
+    <image src='../../img/a1.jpg'></image>
+    <text>热销榜</text>
+  </view>
+  <view class='icon jh'>
+    <image src='../../img/a1.jpg'></image>
+    <text>热销榜</text>
+  </view>
+  <view class='icon jh'>
+    <image src='../../img/a1.jpg'></image>
+    <text>热销榜</text>
+  </view>
+  <view class='big flex'>
+  <view class='section jh'>
+   <view class='sections1 sections'>
+   <view class='zhon'>
+      <text>新人大礼包</text>
+      <text>注册即领</text>
+      <view class='money flex' bindtap='handleClick'>
+        <view class='money1'>
+          <text class='rmb'>￥</text>
+          <text class='es'>20</text>
+          <text class='money1s'>优惠券</text>
+        </view>
+        <view class='money2'>
+          <text>立即</text>
+          <text>领取</text>
+        </view>
+        </view>
+      </view>
+   </view>
+    <view class='sections2 sections'>
+     <view class='zhon'>
+        <text>新人专区</text>
+        <text>9元包邮</text>
+        <image src='../../img/a1.jpg'></image>
+        </view>
+    </view>
+    <view class='sections3 sections'>
+     <view class='zhon'>
+        <text>新人专享价</text>
+        <text>爆款单品</text>
+        <image src='../../img/a1.jpg'></image>
+        </view>
+    </view>
+  </view>
+  <view class='section jh sectio'>
+    <view class='zy'>
+      <view><text class='zsq'>掌上抢</text></view>
+      <view class='qiang'><text class='tit'>12点场</text><text class='tit'>距离下场</text>
+       <view class='shijian' wx:for="{{countDownList}}" wx:key="countDownList"> <text class='shi sj'>{{item.hou}}</text>:<text class='fen sj'>{{item.min}}</text>:<text class='miao sj'>{{item.sec}}</text></view>
+     </view>
+    </view>
+    <view class='big'>
+      <view class='tu'>
+           <image src='../../img/a1.jpg'></image>
+         <text class='t_tit'>￥32.00</text>
+         <text class='t_mon'>￥50.00</text>
+      </view>
+    <view class='tu'>
+           <image src='../../img/a1.jpg'></image>
+         <text class='t_tit'>￥32.00</text>
+         <text class='t_mon'>￥50.00</text>
+      </view>
+      <view class='tu'>
+           <image src='../../img/a1.jpg'></image>
+         <text class='t_tit'>￥32.00</text>
+         <text class='t_mon'>￥50.00</text>
+      </view>
+  </view>
+  </view>
+  <view class='section jh ss flex1'>
+   <view class='shang flex4'>
+    <text class='s-tit'>好货</text>
+    <text class='s-tit1'>品质好物盘点</text>
+    <image src='../../img/a1.jpg'></image>
+    <text class='mt'>品质精挑</text>
+   </view>
+  
+   <view class='zhon flex4'>
+       <text class='lq'>领券中心</text>
+    <text>双十一神券品</text>
+    <image src='../../img/a1.jpg'></image>
+    <text class='mt'>1111元神券</text>
+   </view>
+     <view class='xia flex2'>
+       <text>更多优惠等你来</text>
+       <navigator class='hh'>点击进入></navigator>
+     </view>
+  </view>
+ 
+  </view>
+</view>
+<view class='tj'>
+  <view class='stj flex1'>
+   <view class='xian'>
+     <view></view>
+   </view>
+   <view class='kua'>商家推荐</view>
+   <view class='xian'>
+    <view></view>
+   </view>
+  </view>
+  <view class='tp'>
+   <image src='../../img/a1.jpg'></image>
+  </view>
+  <view class='t-title'>
+  <text>大牌化妆品</text>
+  <text>低至五折起</text>
+  </view>
+</view>
+<view class='biggest flex'>
+  <view class='b-big flex2' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+
+ <view class='b-big flex2' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+   <view class='b-big flex2' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+   <view class='b-big flex2' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+  <view class='b-big flex2' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+</view>
+
+
+
+

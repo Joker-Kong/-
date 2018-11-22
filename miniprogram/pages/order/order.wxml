@@ -1,0 +1,63 @@
+<view class="head cen b-big">
+ <text style='font-size:13px;'>暂无收货地址</text><view class='tj'>点击添加</view>
+</view>
+<view class='big b-big'>
+<zan-card
+      card-class="test-card"
+      thumb="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg"
+      useThumbSlot="{{ true }}"
+      useDetailSlot="{{ true }}"
+    >
+      <!-- 右侧详情 -->
+      <view slot="detail-slot" class="zan-card__detail">
+        <view>婷美小屋，防水滋润不易脱，学生口碑好，真的是好</view>
+        <view class='tits'> <text class='money'>￥129</text> <text>  ×{{ stepper1.stepper }}</text></view>
+      </view>
+    </zan-card>
+    <view class='cell'>
+    <navigator class='cell-item flex1'>
+        <text>购买数量</text>
+        <zan-stepper
+        stepper="{{ stepper1.stepper }}"
+        min="{{ stepper1.min }}"
+        data-component-id="stepper1"
+        bind:change="handleZanStepperChange"
+      >
+      </zan-stepper>
+    </navigator>
+</view>
+<view class='cell'>
+    <navigator class='cell-item flex1'>
+        <text>店铺优惠</text>
+        <text>暂无</text>
+    </navigator>
+</view>
+<view class='cell'>
+    <navigator class='cell-item flex1'>
+        <text>配送方式</text>
+        <text>快递 免邮</text>
+    </navigator>
+</view>
+<view class='cell'>
+    <navigator class='cell-item flex1'>
+        <text>运险费</text>
+        <text>卖家送，确认收货前退货可赔</text>
+    </navigator>
+</view>
+<zan-field
+        title="买家留言"
+        placeholder="在此输入想对商家说的话"
+      >
+      </zan-field>
+      <view class='cell'>
+    <navigator class='cell-item hh'>
+        <text>共{{ stepper1.stepper }}件商品</text>　
+    <text>小计</text>:<text class='money'> ￥{{total}}</text>
+    </navigator>
+</view>
+</view>
+<view class='foot b-big'>
+   <text class='tit xx'>合计金额</text>
+   <text class='money xx'> ￥{{total}}</text>
+   <text class='btn an'>提交订单</text>
+</view>

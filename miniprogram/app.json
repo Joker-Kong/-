@@ -1,13 +1,53 @@
 {
-  "pages": [
-    "pages/index/index"
-    
+  "pages":[
+    "pages/index/index",
+     "pages/classify/classify",
+     "pages/shop/shop",
+      "pages/my/my",
+     "pages/address/address",
+     "pages/search/search",
+     "pages/order/order"
   ],
-  "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+  "usingComponents": {
+    "zan-card": "packages/card/index",
+    "zan-field": "packages/field/index",
+    "zan-stepper": "packages/stepper/index"
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#32ab20",
+    "navigationBarTitleText": "婷美小屋",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#FF0000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "img/h1.png",
+        "iconPath": "img/h2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/h5.png",
+        "iconPath": "img/h6.png",
+        "pagePath": "pages/classify/classify",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "img/c1.png",
+        "iconPath": "img/c2.png",
+        "pagePath": "pages/shop/shop",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "img/h3.png",
+        "iconPath": "img/h4.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
   }
 }

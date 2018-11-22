@@ -1,0 +1,10 @@
+
+.xx{
+  position:relative;
+  top: -50rpx;
+  left: 620rpx;
+}
+.hh{
+  position: relative;
+  top: 20rpx;
+}

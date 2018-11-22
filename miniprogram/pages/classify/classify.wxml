@@ -1,0 +1,61 @@
+<zan-search
+      placeholder="搜索..."
+      searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};"
+      inputStyle="height: 56rpx; border-radius: 8rpx;"
+      keyword="{{ inputValue }}"
+      focus="{{ focus }}"
+      bindchange="searchChange"
+      bindsearch="searchDone"
+    />
+  
+<view class='big'>
+<view class='nav'>
+<scroll-view class="nav-scroll"  scroll-y="true" style="height: 100%;">
+<view class="nav-item {{index == state ? 'active':''}}"  wx:for="{{list}}" data-id="{{index}}" catchtap="chooseType"> {{item.name}} </view>
+</scroll-view>
+</view> 
+  <view class='content '>
+  <scroll-view class="nav-scroll" scroll-y="true" style="height:1000rpx;">
+  <view class='ld' data-id="l1">
+   <view class='fl'>
+    <text>护肤专区</text>  </view>
+    <view class='fls'>
+  <view class='b-big flex3 '  >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+    <view class='b-big flex3' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+    <view class='b-big flex3' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+  </view>
+    <view class='b-big flex3' >
+   <image class="img1" src='../../img/a1.jpg'></image>
+   <text class='b-tit'>粉样变色口红</text>
+   <view class='nr flex'>
+   <text class='nr-money'>￥69.00</text>
+    <image class='img2' src='../../img/c1.png'></image>
+   </view>
+   </view>
+  </view>
+  </view>
+    </scroll-view>
+  </view>
+</view>
+
+

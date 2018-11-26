@@ -2,6 +2,7 @@
 @import './weui.wxss';
 page{
     background-color:#f0eff5;
+    width: 750rpx;
 }
 .flex{
   display: flex;

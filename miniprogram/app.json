@@ -10,8 +10,7 @@
   ],
   "usingComponents": {
     "zan-card": "packages/card/index",
-    "zan-field": "packages/field/index",
-    "zan-stepper": "packages/stepper/index"
+    "zan-field": "packages/field/index"
   },
   "window":{
     "backgroundTextStyle":"light",
@@ -21,7 +20,7 @@
   },
   "tabBar": {
     "color": "#a9b7b7",
-    "selectedColor": "#FF0000",
+    "selectedColor": "#be1a21",
     "borderStyle": "white",
     "list": [
       {

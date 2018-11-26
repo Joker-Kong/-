@@ -3,10 +3,12 @@
     "pages/index/index",
      "pages/classify/classify",
      "pages/shop/shop",
-      "pages/my/my",
+     "pages/my/my",
      "pages/address/address",
      "pages/search/search",
-     "pages/order/order"
+     "pages/order/order",
+     "pages/details/details",
+     "pages/well/well"
   ],
   "usingComponents": {
     "zan-card": "packages/card/index",

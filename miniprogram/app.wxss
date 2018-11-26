@@ -116,3 +116,13 @@ page{
   text-align: center;
   color: white;
 }
+.biggest{
+  padding:0 20rpx 20rpx 20rpx
+}
+.img1{
+  width: 340rpx;
+  height: 330rpx;
+}
+.b-big{
+  margin-top: 20rpx;
+}

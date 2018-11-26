@@ -2,7 +2,7 @@
       placeholder="请输入要搜索的商品内容"
       searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};"
       inputStyle="height: 56rpx; border-radius: 8rpx;"
-      bindtap="onSearch"
+      bind:search="onSearch"
     />
 <view class='center'>
    <view>1111111111111111111</view>

@@ -1,8 +1,9 @@
+// 云函数入口文件
+const cloud = require('wx-server-sdk')
 
-exports.main = (event, context) => {
-  console.log(event)
-  console.log(context)
-  return {
-    openid: event.userInfo.openId,
-  }
+cloud.init()
+
+// 云函数入口函数
+exports.main = async (event, context) => {
+  return event
 }

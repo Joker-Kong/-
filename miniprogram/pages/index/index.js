@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 let goodsList = [
-  { actEndTime: '2019-12-31 12:00:43' }
+  { actEndTime: '2019/12/31 12:00:43' }
 ]
 Page({
   data: {
@@ -47,7 +47,7 @@ Page({
   },
   countDown() {//倒计时函数
     // 获取当前时间，同时得到活动结束时间数组
-    let newTime = new Date().getTime();
+    let newTime = new Date().getTime() || new Date(date.replace(/-/g, '/')).getTime();
     let endTimeList = this.data.actEndTimeList;
     let countDownArr = [];
     // 对结束时间进行处理渲染到页面
@@ -95,3 +95,5 @@ Page({
     }
   }  
 })
+
+

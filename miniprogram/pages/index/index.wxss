@@ -218,13 +218,3 @@ swiper-item image{
 .t-title text:nth-child(2){
   margin-left: 300rpx
 }
-.biggest{
-  padding:0 20rpx 20rpx 20rpx
-}
-.img1{
-  width: 340rpx;
-  height: 330rpx;
-}
-.b-big{
-  margin-top: 20rpx;
-}

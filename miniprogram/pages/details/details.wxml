@@ -1,0 +1,21 @@
+<view><image></image></view>
+<view class='footer'>
+    <view class='left flex1'>
+      <view class='img flex2'>
+         <zan-icon type="phone"></zan-icon>
+         <text>电话</text>
+      </view>
+      <view class='img flex2'>
+         <zan-icon type="chat"></zan-icon>
+         <text>客服</text>
+      </view>
+      <view class='img flex2'>
+        <zan-icon type="shopping-cart"></zan-icon>
+         <text>购物车</text>
+      </view>
+    </view>
+    <view class='right'>
+       <view>加入购物车</view>
+        <view>立即购买</view>
+    </view>
+</view>

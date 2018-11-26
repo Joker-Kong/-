@@ -14,10 +14,12 @@
   </block>
 </swiper>
 <view class='center flex'>
+<navigator url='../well/well'>
   <view class='icon jh'>
     <image src='../../img/a1.jpg'></image>
     <text>热销榜</text>
   </view>
+  </navigator>
   <view class='icon jh'>
     <image src='../../img/a1.jpg'></image>
     <text>热销榜</text>
@@ -36,6 +38,8 @@
    <view class='zhon'>
       <text>新人大礼包</text>
       <text>注册即领</text>
+      <button style='height:68rpx; position:absolute;z-index:1;top:752rpx;width:184rpx;display:none'>
+       </button>
       <view class='money flex' bindtap='handleClick'>
         <view class='money1'>
           <text class='rmb'>￥</text>
@@ -130,6 +134,7 @@
   </view>
 </view>
 <view class='biggest flex'>
+<navigator url='../details/details'>
   <view class='b-big flex2' >
    <image class="img1" src='../../img/a1.jpg'></image>
    <text class='b-tit'>粉样变色口红</text>
@@ -138,7 +143,7 @@
     <image class='img2' src='../../img/c1.png'></image>
    </view>
   </view>
-
+ </navigator>
  <view class='b-big flex2' >
    <image class="img1" src='../../img/a1.jpg'></image>
    <text class='b-tit'>粉样变色口红</text>

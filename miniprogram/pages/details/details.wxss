@@ -1,0 +1,32 @@
+.footer{
+  width: 730rpx;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  font-size: 15px;
+  padding-left: 20rpx;
+}
+.img{
+  text-align: center
+}
+.left{
+  width: 340rpx;
+}
+.right{
+ width: 370rpx;
+  display: flex;
+  padding-left: 20rpx;
+}
+.right view{
+   width: 185rpx;
+    text-align: center;
+    line-height: 96rpx;
+    color: white;
+}
+.right view:nth-child(1){
+  background:orange;
+}
+.right view:nth-child(2){
+  background:red;
+}

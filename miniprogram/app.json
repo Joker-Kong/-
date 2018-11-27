@@ -8,7 +8,8 @@
      "pages/search/search",
      "pages/order/order",
      "pages/details/details",
-     "pages/well/well"
+     "pages/well/well",
+     "pages/test/test"
   ],
   "usingComponents": {
     "zan-card": "packages/card/index",

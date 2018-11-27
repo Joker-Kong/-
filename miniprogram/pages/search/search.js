@@ -4,20 +4,19 @@ const db = wx.cloud.database()
 
 Page({
 
-  
  onSearch:function(options){
-   console.log(options.detail.value)
+   console.log(options)
    var re = new RegExp( options.detail.value);
-  console.log(re);
-    
    //原生 JavaScript 对象
    db.collection('items').where({
-     name: re
+     itemName: re
    }).get().then(res =>{
-     console.log(res)
+     console.log(res.data[0].images)
      this.setData({
-       search:res.data
+       itemName: res.data[0].itemName,
+       id:res.data[0]._id
      })
    })
  }
+
 });

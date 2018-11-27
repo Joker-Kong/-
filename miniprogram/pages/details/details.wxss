@@ -1,11 +1,15 @@
+.image image{
+  width: 100%;
+}
 .footer{
   width: 730rpx;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   z-index: 1;
   display: flex;
   font-size: 15px;
   padding-left: 20rpx;
+  background: white;
 }
 .img{
   text-align: center

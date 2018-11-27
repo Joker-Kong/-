@@ -1,5 +1,5 @@
 <view class='center'>
-  <zan-search placeholder="请输入要搜索的商品内容" searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};" inputStyle="height: 56rpx; border-radius: 8rpx;" bind:change="onSearch" />
+  <zan-search placeholder="请输入要搜索的商品内容" searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};" inputStyle="height: 56rpx; border-radius: 8rpx;" bind:search="onSearch" />
   <!-- <block wx:for="{{searchs}}"> -->
     <navigator url="../details/details?id={{id}}">{{itemName}}</navigator>
     <!-- <image src='{{item.images}}'></image> -->

@@ -123,15 +123,25 @@ Page({
    * 添加到购物车
    */
   addShoppingCart: function(options){
-    console.log(options)
+    console.log(options.target.id)
     db.collection('shoppingCart').add({
-      itemId:''
+      data:{
+        itemId: options.target.id
+      }
     }).then(res =>{
       console.log(res)
-      this.setData({
-        images: res.data
+      wx.showToast({
+        title: '成功添加购物车',
+        icon: 'success',
+        duration: 1000
       })
-    })
+      }).catch(error => {
+        wx.showToast({
+          title: '添加失败',
+          icon: 'fail',
+          duration: 1000
+        })
+      })
   },                                    
   /**
    * 跳转搜索页面
@@ -142,11 +152,7 @@ Page({
     })
   },
   handleClick(e){
-    wx.showToast({
-      title: '成功添加购物车',
-      icon: 'success',
-      duration: 1000
-    })
+    
   var index= e.currentTarget.dataset.id
   },
   onShareAppMessage: function () {

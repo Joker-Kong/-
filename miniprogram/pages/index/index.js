@@ -1,15 +1,14 @@
-//index.js
-//获取应用实例
+wx.cloud.init()
+const db = wx.cloud.database();
 const app = getApp()
+
 let goodsList = [
   { actEndTime: '2019/12/31 12:00:43' }
 ]
 Page({
   data: {
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
     ],
     indicatorDots: true,
     autoplay: true,
@@ -18,23 +17,12 @@ Page({
     countDownList: [],
     actEndTimeList: []
   },
-  searchChange(e) {
-    this.setData({
-      inputValue: e.detail.value
-    });
-  },
-  onSearch() {
-    wx.navigateTo({
-      url: '../search/search'
-    })
-  },
-  handleClick(){
-    console.log(111)
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.recommend();
+    
     let endTimeList = [];
     // 将活动的结束时间参数提成一个单独的数组，方便操作
     goodsList.forEach(o => { endTimeList.push(o.actEndTime) })
@@ -42,10 +30,14 @@ Page({
     // 执行倒计时函数
     this.countDown();
   },
+
   timeFormat(param) {//小于10的格式化函数
     return param < 10 ? '0' + param : param;
   },
-  countDown() {//倒计时函数
+  /**
+   * 倒计时函数
+   */
+  countDown(){
     // 获取当前时间，同时得到活动结束时间数组
     let newTime = new Date().getTime() || new Date(date.replace(/-/g, '/')).getTime();
     let endTimeList = this.data.actEndTimeList;
@@ -80,12 +72,67 @@ Page({
     this.setData({ countDownList: countDownArr })
     setTimeout(this.countDown, 1000);
   },
-  searchDone(e) {
+  /**
+   * 热销推荐
+   */
+  recommend:function(){
+    db.collection('items').where({
+      recommend:true
+    }).get().then(res =>{
+      // console.log(res)
+    }).catch(erro =>{
+      console.log(erro)
+    })
   },
-  //事件处理函数
-  bindViewTap: function() {
+    /**
+   * 获取用户信息
+   */
+    onGotUserInfo: function(event) {
+      db.collection('userInfo').where({
+        _openid: app.globalData.openId
+      }).count().then(res => {
+          if (res.total <= 0) {
+            db.collection('userInfo').add({
+              data: {
+                nickName: event.detail.userInfo.nickName,
+                gender: event.detail.userInfo.gender,
+                city: event.detail.userInfo.city,
+                province: event.detail.userInfo.province,
+                country: event.detail.userInfo.country,
+                language: event.detail.userInfo.language,
+                avatarUrl: event.detail.userInfo.avatarUrl,
+                isNewUser: false,
+                coupon: 20
+              }
+            }).then(res => {
+              wx.showToast({
+                title: '领取成功！',
+              })
+            }).catch(console.error)
+          } else {
+            wx.showToast({
+              title: '您已领取过了',
+            })
+          }
+        }).catch(console.error)
+  },
+  /**
+   * 添加到购物车
+   */
+  addShoppingCart: function(options){
+    console.log(options)
+    db.collection('shoppingCart').add({
+      itemId:''
+    }).then(res =>{
+      console.log(res)
+    })
+  },                                    
+  /**
+   * 跳转搜索页面
+   */
+  onSearch() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../search/search'
     })
   },
   onShareAppMessage: function () {

@@ -218,3 +218,11 @@ swiper-item image{
 .t-title text:nth-child(2){
   margin-left: 300rpx
 }
+.xx{
+  height:68rpx; 
+  position:absolute;
+  z-index:1;
+  top:752rpx; 
+  width:184rpx;
+  opacity: 0;
+}

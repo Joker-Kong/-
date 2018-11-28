@@ -18,6 +18,20 @@ Page({
     heightArr: [],
     containerH: 0
   },
+  onLoad: function (options) {
+    this.getClassify();
+  },
+  /**
+   * 获取分类
+   */
+  getClassify:function(){
+    db.collection('classify').get().then(res => {
+      console.log(res)
+    })
+  },
+  /**
+   * 获取各分类产品
+   */
   chooseClassify:function(parameter){
     console.log(parameter)
      db.collection('items').where({
@@ -26,6 +40,16 @@ Page({
        console.log(res)
      })
   },
+
+  // chooseClassify: function (parameter) {
+  //   console.log(parameter)
+  //   db.collection('classify').where({
+  //     key: '护肤'
+  //   }).get().then(res => {
+  //     console.log(res)
+  //   })
+  // },
+
   chooseType(e) {
     this.setData({
       state: e.currentTarget.dataset.id

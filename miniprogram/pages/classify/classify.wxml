@@ -1,4 +1,4 @@
-<zan-search
+<!-- <zan-search
       placeholder="搜索..."
       searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};"
       inputStyle="height: 56rpx; border-radius: 8rpx;"
@@ -7,11 +7,11 @@
       bindchange="searchChange"
       bindsearch="searchDone"
     />
-  
+   -->
 <view class='big'>
 <view class='nav'>
 <scroll-view class="nav-scroll"  scroll-y="true" style="height: 100%;">
-<view class="nav-item {{index == state ? 'active':''}}"  wx:for="{{list}}" data-id="{{index}}" catchtap="chooseType"> {{item.name}} </view>
+<view class="nav-item {{index == state ? 'active':''}}"  wx:for="{{list}}" wx:key = "{{item._id}}" data-id="{{index}}" catchtap="chooseType"> {{item.name}} </view>
 </scroll-view>
 </view> 
   <view class='content '>

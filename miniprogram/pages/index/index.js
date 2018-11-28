@@ -22,6 +22,7 @@ Page({
    */
   onLoad: function (options) {
     this.recommend();
+    this.getRecommend();
     
     let endTimeList = [];
     // 将活动的结束时间参数提成一个单独的数组，方便操作
@@ -30,7 +31,14 @@ Page({
     // 执行倒计时函数
     this.countDown();
   },
-
+  getRecommend:function(){
+    db.collection('recommend').get().then(res =>{
+      console.log(res)
+      this.setData({
+        recommend:res.data
+      })
+    }).catch(console.log)
+  },
   timeFormat(param) {//小于10的格式化函数
     return param < 10 ? '0' + param : param;
   },

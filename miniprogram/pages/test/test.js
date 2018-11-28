@@ -46,8 +46,19 @@ Page({
     }).then(res => {
       console.log(res)
     })
-  }
+  },
   
+  addData5: function () {
+    db.collection('recommend').add({
+      data: {
+        key: '必买',
+        name: '进店必买',
+        firstPictrue: 'cloud://test-a9be2a.7465-test-a9be2a/首页/进店必买.jpg'
+      }
+    }).then(res => {
+      console.log(res)
+    })
+  }
  
 
 })

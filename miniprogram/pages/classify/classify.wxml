@@ -15,6 +15,7 @@
 </scroll-view>
 </view> 
   <view class='content '>
+  
   <scroll-view class="nav-scroll" scroll-y="true" style="height:1000rpx;">
   <view class='ld' data-id="l1">
    <view class='fl'>
@@ -58,4 +59,4 @@
   </view>
 </view>
 
-
+<button bindtap='chooseClassify'>测试</button>

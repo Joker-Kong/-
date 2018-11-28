@@ -1,2 +1,7 @@
 
-<button bindtap="addData">添加数据</button>
+<button bindtap="addData">添加商品数据</button>
+<button bindtap="addData1">添加精选数据</button>
+<button bindtap="addData2">添加热销榜数据</button>
+<button bindtap="addData3">添加进店必买数据</button>
+<button bindtap="addData4">添加印象数据</button>
+

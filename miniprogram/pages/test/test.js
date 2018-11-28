@@ -1,4 +1,4 @@
-wx.cloud.init()
+
 const db = wx.cloud.database();
 
 Page({
@@ -34,6 +34,20 @@ Page({
       console.log(res)
     })
   },
+
+  addData1: function () {
+    db.collection('promotion').add({
+      data:{
+        class:'精选',
+        itemName: '气色满满腮红乳',
+        price: 139.00,
+        firstPictrue: 'cloud://test-a9be2a.7465-test-a9be2a/促销/3.jpg'
+        }
+    }).then(res => {
+      console.log(res)
+    })
+  }
+  
  
 
 })

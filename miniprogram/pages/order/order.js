@@ -5,7 +5,7 @@ Page({
     totalPrice: 0,           // 总价，初始为0
     nums:0    
   },
-  onShow() {
+  onShow() { 
     this.setData({
       hasList: true,        // 既然有数据了，那设为true吧
       carts: [

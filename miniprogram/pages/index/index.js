@@ -124,6 +124,7 @@ Page({
    */
   addShoppingCart: function(options){
     console.log(options.target.id)
+    
     db.collection('shoppingCart').add({
       data:{
         itemId: options.target.id

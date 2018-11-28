@@ -5,7 +5,7 @@
    <image class="img1" src='{{item.firstPictrue}}'></image>
    <text class='b-tit'>{{item.itemName}}</text>
    <view class='nr flex'>
-   <text class='nr-money'>{{item.price}}</text>
+   <text class='nr-money'>￥{{item.price}}.00</text>
     <image class='img2' src='../../img/c1.png'></image>
    </view>
   </view>

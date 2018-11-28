@@ -24,8 +24,7 @@
       <view class='sections1 sections'>
         <view class='zhon'>
           <text>新人大礼包</text>
-          <text class='yhq'>20元优惠券</text>
-          <button class='xx' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" bindtap='handleClick'></button>
+          <button class='xx yhq' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" bindtap='handleClick'>20元优惠券</button>
         </view>
       </view>
       <view class='sections2 flex3'>

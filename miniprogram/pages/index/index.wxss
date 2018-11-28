@@ -19,7 +19,12 @@ swiper-item image{
   padding: 0 57rpx 20rpx 57rpx;
   width: 636rpx;
   margin-top: 20rpx;
-  
+}
+button{
+  padding: 0;
+}
+button::after{
+border: none;
 }
 .icon{
   width:120rpx;
@@ -27,7 +32,7 @@ swiper-item image{
 .icon image{
   width:120rpx;
   height: 120rpx;
-}
+}     
 .section{
   width: 636rpx;
   height: 216rpx;
@@ -256,6 +261,7 @@ swiper-item image{
   height: 68rpx;
   background-image: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/f3.png?sign=8848d3a0064c453db9844e8cc2fc8fa3&t=1543381157);
   background-size:184rpx 68rpx;
+  font-size: 14px;
 }
 .tits{
   text-decoration:line-through

@@ -1,5 +1,5 @@
 
-<view class='image'><image wx:for="{{images}}" src='{{images[index]}}' mode='widthFix'></image></view>
+<view class='image'><image wx:for="{{images}}" wx:key = "{{item._id}}"src='{{images[index]}}' mode='widthFix'></image></view>
 <view class='footer'>
     <view class='left flex1'>
       <view class='img flex2'>

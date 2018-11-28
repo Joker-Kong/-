@@ -5,4 +5,5 @@
 <button bindtap="addData3">添加进店必买数据</button>
 <button bindtap="addData4">添加印象数据</button>
 <button bindtap="addData5">添加推荐数据</button>
+<button bindtap="addData6">添加分类数据</button>
 

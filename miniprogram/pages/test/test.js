@@ -93,7 +93,18 @@ Page({
     }).then(res => {
       console.log(res)
     })
+  },
+  addData6: function () {
+    db.collection('classify').add({
+      data: {
+        key: '彩妆',
+        name: '彩妆专区',
+      }
+    }).then(res => {
+      console.log(res)
+    })
   }
+
  
 
 })

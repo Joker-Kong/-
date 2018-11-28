@@ -28,8 +28,8 @@ page{
   flex-direction:column;
 }
 .img2{
-  width: 38rpx;
-  height:28rpx;
+  width: 48rpx;
+  height:38rpx;
 }
 .b-tit{
   font-size: 12px;

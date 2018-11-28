@@ -153,7 +153,7 @@ swiper-item image{
   display:flex;
   justify-content: space-around;
   padding-top: 10rpx;
-    position: relative
+  position: relative
 }
 .t_mon{
   font-size: 16rpx;
@@ -245,14 +245,11 @@ swiper-item image{
   white-space: nowrap;
   margin-top:20rpx;
 }
-.image-group .group{
-  display: inline-block;
-  margin-right: 20rpx;
-  font-size: 12px;
-}
 .image-group image {
-  width:108rpx;
-  height:108rpx;
+  width:150rpx;
+  height:150rpx;
+ display: inline-block;
+  margin-right: 20rpx;
 }
 .yhq{
   width: 184rpx;

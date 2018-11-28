@@ -16,10 +16,12 @@
       <text>热销榜</text>
     </view>
   </navigator>
+  <navigator url='../well/well?key=精选'>
   <view class='icon jh'>
     <image src='../../img/a1.jpg'></image>
     <text>精选彩妆</text>
   </view>
+   </navigator>
   <view class='icon jh'>
     <image src='../../img/a1.jpg'></image>
     <text>进店必买</text>
@@ -60,41 +62,13 @@
         </view>
       </view>
       <scroll-view class="image-group" scroll-x="true">
-         <view class='group'>
          <image src="../../img/a1.jpg"></image>
-          <text class='mn'>￥32.00</text>
-          <text class='tit tits'>￥50.00</text>
-         </view>
-          <view class='group'>
          <image src="../../img/a1.jpg"></image>
-          <text class='mn'>￥32.00</text>
-          <text class='tit tits'>￥50.00</text>
-         </view>
-         <view class='group'>
          <image src="../../img/a1.jpg"></image>
-          <text class='mn'>￥32.00</text>
-          <text class='tit tits'>￥50.00</text>
-         </view>
-               <view class='group'>
          <image src="../../img/a1.jpg"></image>
-          <text class='mn'>￥32.00</text>
-          <text class='tit tits'>￥50.00</text>
-         </view>
-         <view class='group'>
          <image src="../../img/a1.jpg"></image>
-          <text class='mn'>￥32.00</text>
-          <text class='tit tits'>￥50.00</text>
-         </view>
-         <view class='group'>
          <image src="../../img/a1.jpg"></image>
-          <text class='mn'>￥32.00</text>
-          <text class='tit tits'>￥50.00</text>
-         </view>
-         <view class='group'>
          <image src="../../img/a1.jpg"></image>
-          <text class='mn'>￥32.00</text>
-          <text class='tit tits'>￥50.00</text>
-         </view>    
         </scroll-view>
     </view>
   </view>

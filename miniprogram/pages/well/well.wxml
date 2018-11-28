@@ -1,44 +1,14 @@
 <view class='biggest flex'>
+<block wx:for="{{list}}">
 <navigator url='../details/details'>
   <view class='b-big flex2' >
-   <image class="img1" src='../../img/a1.jpg'></image>
-   <text class='b-tit'>粉样变色口红</text>
+   <image class="img1" src='{{item.firstPictrue}}'></image>
+   <text class='b-tit'>{{item.itemName}}</text>
    <view class='nr flex'>
-   <text class='nr-money'>￥69.00</text>
+   <text class='nr-money'>{{item.price}}</text>
     <image class='img2' src='../../img/c1.png'></image>
    </view>
   </view>
  </navigator>
- <view class='b-big flex2' >
-   <image class="img1" src='../../img/a1.jpg'></image>
-   <text class='b-tit'>粉样变色口红</text>
-   <view class='nr flex'>
-   <text class='nr-money'>￥69.00</text>
-    <image class='img2' src='../../img/c1.png'></image>
-   </view>
-  </view>
-   <view class='b-big flex2' >
-   <image class="img1" src='../../img/a1.jpg'></image>
-   <text class='b-tit'>粉样变色口红</text>
-   <view class='nr flex'>
-   <text class='nr-money'>￥69.00</text>
-    <image class='img2' src='../../img/c1.png'></image>
-   </view>
-  </view>
-   <view class='b-big flex2' >
-   <image class="img1" src='../../img/a1.jpg'></image>
-   <text class='b-tit'>粉样变色口红</text>
-   <view class='nr flex'>
-   <text class='nr-money'>￥69.00</text>
-    <image class='img2' src='../../img/c1.png'></image>
-   </view>
-  </view>
-  <view class='b-big flex2' >
-   <image class="img1" src='../../img/a1.jpg'></image>
-   <text class='b-tit'>粉样变色口红</text>
-   <view class='nr flex'>
-   <text class='nr-money'>￥69.00</text>
-    <image class='img2' src='../../img/c1.png'></image>
-   </view>
-  </view>
+ </block>
 </view>

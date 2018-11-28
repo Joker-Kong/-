@@ -47,7 +47,42 @@ Page({
       console.log(res)
     })
   },
-  
+  addData2: function () {
+    db.collection('promotion').add({
+      data: {
+        class: '热销',
+        itemName: '气色满满腮红乳',
+        price: 139.00,
+        firstPictrue: 'cloud://test-a9be2a.7465-test-a9be2a/促销/3.jpg'
+      }
+    }).then(res => {
+      console.log(res)
+    })
+  },
+  addData3: function () {
+    db.collection('promotion').add({
+      data: {
+        class: '必买',
+        itemName: '绿茶籽洗面奶',
+        price: 49.00,
+        firstPictrue: 'cloud://test-a9be2a.7465-test-a9be2a/促销/绿茶籽面膜首页.jpg'
+      }
+    }).then(res => {
+      console.log(res)
+    })
+  },
+  addData4: function () {
+    db.collection('promotion').add({
+      data: {
+        class: '印象',
+        itemName: '保湿修颜隔离霜',
+        price: 139.00,
+        firstPictrue: 'cloud://test-a9be2a.7465-test-a9be2a/促销/保湿修颜隔离霜.jpg'
+      }
+    }).then(res => {
+      console.log(res)
+    })
+  },
   addData5: function () {
     db.collection('recommend').add({
       data: {

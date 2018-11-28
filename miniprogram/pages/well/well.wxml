@@ -1,6 +1,6 @@
 <view class='biggest flex'>
 <block wx:for="{{list}}">
-<navigator url='../details/details'>
+<navigator url='../details/details' wx:key="{{item._id}}">
   <view class='b-big flex2' >
    <image class="img1" src='{{item.firstPictrue}}'></image>
    <text class='b-tit'>{{item.itemName}}</text>

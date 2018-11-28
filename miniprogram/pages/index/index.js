@@ -33,7 +33,6 @@ Page({
   },
   getRecommend:function(){
     db.collection('recommend').get().then(res =>{
-      console.log(res)
       this.setData({
         recommend:res.data
       })
@@ -92,7 +91,7 @@ Page({
         images:res.data
       })
     }).catch(erro =>{
-      console.log(erro)
+      
     })
   },
   
@@ -141,7 +140,6 @@ Page({
         price: options.target.dataset.price
       }
     }).then(res =>{
-      console.log(res)
       wx.showToast({
         title: '成功添加购物车',
         icon: 'success',

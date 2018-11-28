@@ -10,27 +10,15 @@
 </swiper>
 
 <view class='center flex'>
-  <navigator url='../well/well'>
+<block wx:for="{{recommend}}" wx:key="{{item._id}}">
+  <navigator url='../well/well?key={{item.key}}'>
     <view class='icon jh'>
-      <image src='../../img/a1.jpg'></image>
-      <text>热销榜</text>
+    <view class='view'>
+      <image src='{{item.firstPictrue}}'></image></view>
+      <text>{{item.name}}</text>
     </view>
   </navigator>
-  <navigator url='../well/well?key=精选'>
-  <view class='icon jh'>
-    <image src='../../img/a1.jpg'></image>
-    <text>精选彩妆</text>
-  </view>
-   </navigator>
-  <view class='icon jh'>
-    <image src='../../img/a1.jpg'></image>
-    <text>进店必买</text>
-  </view>
-  <view class='icon jh'>
-    <image src='../../img/a1.jpg'></image>
-    <text>印象派                                                                                                                                                                                                                                                                                                    </text>
-  </view>
-
+  </block>
   <view class='big flex'>
     <view class='section jh'>
       <view class='sections1 sections'>

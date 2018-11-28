@@ -260,3 +260,8 @@ swiper-item image{
 .tits{
   text-decoration:line-through
 }
+.view{
+  border-radius: 5%;
+  overflow: hidden;
+  font-size: 0;
+}

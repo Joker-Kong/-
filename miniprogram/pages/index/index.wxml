@@ -18,15 +18,15 @@
   </navigator>
   <view class='icon jh'>
     <image src='../../img/a1.jpg'></image>
-    <text>热销榜</text>
+    <text>精选彩妆</text>
   </view>
   <view class='icon jh'>
     <image src='../../img/a1.jpg'></image>
-    <text>热销榜</text>
+    <text>进店必买</text>
   </view>
   <view class='icon jh'>
     <image src='../../img/a1.jpg'></image>
-    <text>热销榜</text>
+    <text>印象派                                                                                                                                                                                                                                                                                                        </text>
   </view>
 
   <view class='big flex'>
@@ -34,9 +34,14 @@
       <view class='sections1 sections'>
         <view class='zhon'>
           <text>新人大礼包</text>
-          <text>20元优惠券</text>
+          <text class='yhq'>20元优惠券</text>
           <button class='xx' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" bindtap='handleClick'></button>
         </view>
+      </view>
+      <view class='sections2 flex3'>
+         <text>新人专享价</text>
+         <text>爆款单品，九块九包邮</text>
+         <image src='../../img/a1.jpg'></image>
       </view>
     </view>
     <view class='section jh sectio'>
@@ -54,6 +59,43 @@
           </view>
         </view>
       </view>
+      <scroll-view class="image-group" scroll-x="true">
+         <view class='group'>
+         <image src="../../img/a1.jpg"></image>
+          <text class='mn'>￥32.00</text>
+          <text class='tit tits'>￥50.00</text>
+         </view>
+          <view class='group'>
+         <image src="../../img/a1.jpg"></image>
+          <text class='mn'>￥32.00</text>
+          <text class='tit tits'>￥50.00</text>
+         </view>
+         <view class='group'>
+         <image src="../../img/a1.jpg"></image>
+          <text class='mn'>￥32.00</text>
+          <text class='tit tits'>￥50.00</text>
+         </view>
+               <view class='group'>
+         <image src="../../img/a1.jpg"></image>
+          <text class='mn'>￥32.00</text>
+          <text class='tit tits'>￥50.00</text>
+         </view>
+         <view class='group'>
+         <image src="../../img/a1.jpg"></image>
+          <text class='mn'>￥32.00</text>
+          <text class='tit tits'>￥50.00</text>
+         </view>
+         <view class='group'>
+         <image src="../../img/a1.jpg"></image>
+          <text class='mn'>￥32.00</text>
+          <text class='tit tits'>￥50.00</text>
+         </view>
+         <view class='group'>
+         <image src="../../img/a1.jpg"></image>
+          <text class='mn'>￥32.00</text>
+          <text class='tit tits'>￥50.00</text>
+         </view>    
+        </scroll-view>
     </view>
   </view>
 </view>

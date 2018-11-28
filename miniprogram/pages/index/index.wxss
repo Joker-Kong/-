@@ -44,17 +44,21 @@ swiper-item image{
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  z-index: 1;
 }
 .zhon{
   text-align: center;
 }
 .sections2{
-  width: 128rpx;
-  height:216rpx;
- border-right: 1px black solid;
- box-sizing: border-box;
    padding-top:10rpx;
+   padding-left: 25rpx;
+   display: flex; 
+   align-items: center
+}
+.sections2 image{
+  width: 120rpx;
+  height: 108rpx;
 }
 .sections3{
   width: 200rpx;
@@ -100,6 +104,12 @@ swiper-item image{
   padding-top: 20rpx;
   flex-direction:column;
   height: 260rpx;
+  padding-bottom: 20rpx;
+  background-image: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/f2.png?sign=0bf41f87086edd521a07b13ed5a81213&t=1543380963);
+  background-size: 636rpx 260rpx
+}
+.bj{
+  background-color: #e0607c;
 }
 .sectio image{
   width: 22px;
@@ -122,6 +132,7 @@ swiper-item image{
 .shijian{
   display: flex;
   line-height: 25rpx;
+  margin-left:20rpx;
 }
 .sj{
   width: 25rpx;
@@ -141,7 +152,8 @@ swiper-item image{
 .big{
   display:flex;
   justify-content: space-around;
-  padding-top: 10rpx
+  padding-top: 10rpx;
+    position: relative
 }
 .t_mon{
   font-size: 16rpx;
@@ -217,4 +229,37 @@ swiper-item image{
 }
 .t-title text:nth-child(2){
   margin-left: 300rpx
+}
+.icon{
+  font-size: 14px;
+  text-align: center
+}
+.xx{
+  height: 50rpx;
+}
+.group text {
+  display: block
+}
+.image-group {
+  display: flex;
+  white-space: nowrap;
+  margin-top:20rpx;
+}
+.image-group .group{
+  display: inline-block;
+  margin-right: 20rpx;
+  font-size: 12px;
+}
+.image-group image {
+  width:108rpx;
+  height:108rpx;
+}
+.yhq{
+  width: 184rpx;
+  height: 68rpx;
+  background-image: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/f3.png?sign=8848d3a0064c453db9844e8cc2fc8fa3&t=1543381157);
+  background-size:184rpx 68rpx;
+}
+.tits{
+  text-decoration:line-through
 }

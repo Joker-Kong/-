@@ -87,6 +87,7 @@ Page({
       console.log(erro)
     })
   },
+  
     /**
    * 获取用户信息
    */

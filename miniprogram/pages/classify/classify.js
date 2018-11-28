@@ -1,4 +1,4 @@
-
+const db = wx.cloud.database();
 Page({
   data: {
     list:[
@@ -17,6 +17,14 @@ Page({
     navActive: '', // 导航栏选中id
     heightArr: [],
     containerH: 0
+  },
+  chooseClassify:function(parameter){
+    console.log(parameter)
+     db.collection('items').where({
+       classify:'护肤'
+     }).get().then(res =>{
+       console.log(res)
+     })
   },
   chooseType(e) {
     this.setData({

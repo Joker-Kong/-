@@ -3,7 +3,7 @@
     "pages/index/index",
      "pages/classify/classify",
      "pages/shop/shop",
-     "pages/my/my",
+     "pages/me/me",
      "pages/address/address",
      "pages/search/search",
      "pages/order/order",
@@ -47,7 +47,7 @@
       {
         "selectedIconPath": "img/h3.png",
         "iconPath": "img/h4.png",
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/me/me",
         "text": "我的"
       }
     ]

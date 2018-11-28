@@ -1,4 +1,4 @@
-wx.cloud.init()
+
 const db = wx.cloud.database();
 const app = getApp()
 
@@ -128,7 +128,9 @@ Page({
     
     db.collection('shoppingCart').add({
       data:{
-        itemId: options.target.id
+        itemId: options.target.id,
+        firstPictrue: options.target.dataset.image,
+        price: options.target.dataset.price
       }
     }).then(res =>{
       console.log(res)

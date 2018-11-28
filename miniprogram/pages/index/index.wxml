@@ -129,7 +129,7 @@
       <text class='b-tit'>{{item.itemName}}</text>
       <view class='nr flex'>
         <text class='nr-money'>￥{{item.price}}</text>
-        <image class='img2' src='../../img/c1.png' bindtap='addShoppingCart' id='{{item._id}}'></image>
+        <image class='img2' src='../../img/c1.png' bindtap='addShoppingCart' id='{{item._id}}' data-image='{{item.firstPictrue}}' data-price='{{item.price}}'></image>
       </view>
      
     </view>

@@ -37,6 +37,7 @@ page{
 }
 .nr{
   padding-left: 10rpx;
+  padding-right: 15rpx;
 }
 .nr-money{
   color: red;

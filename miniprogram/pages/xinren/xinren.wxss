@@ -1,0 +1,59 @@
+.container{
+  padding: 20rpx 20rpx 80rpx 20rpx;
+  background: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/新人背景.JPG?sign=5b499975f69bbb83c7af4f1c39fc1f98&t=1543467129)
+}
+.heads{
+  width: 220rpx;
+  height: 98rpx;
+}
+.heads:nth-child(1){
+  background: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/优惠券10.png?sign=14a55e25503fcf7bb9d745524f072ca8&t=1543466676) ;
+  background-size:220rpx 98rpx;
+}
+.heads:nth-child(2){
+  background: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/优惠券30.png?sign=9c782a412a990c9887fcfeb8055468e9&t=1543466815) ;
+  background-size:220rpx 98rpx;
+}
+.heads:nth-child(3){
+  background: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/优惠券40.png?sign=b4ff4403edae1c6c651599bfdd6cb8a4&t=1543466838) ;
+  background-size:220rpx 98rpx;
+}
+button{
+  background: #e52f2e;
+  width: 152rpx;
+  height: 70rpx;
+  padding: 0;
+  line-height: 70rpx;
+  font-size: 14px;
+  color: white;
+  margin-top: 20rpx;
+}
+.center{
+  width: 500rpx;
+  margin: 40rpx auto;
+  text-align:center;
+  color: white;
+  font-size: 14px;
+}
+.xian{
+  width:60rpx;
+  height:3rpx; 
+  background: white;
+}
+.tit{
+  margin-top: -20rpx;
+}
+.bottoms{
+  width: 200rpx;
+  height: 270rpx;
+  background: white;
+}
+.zw{
+  width: 152rpx;
+  height:35rpx;
+  text-align: center;
+  color: white;
+  background:orange;
+  font-size: 12px;
+  margin: 200rpx auto;
+}

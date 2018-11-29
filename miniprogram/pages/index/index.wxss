@@ -37,10 +37,19 @@ border: none;
   width: 636rpx;
   height: 216rpx;
   border-radius: 5%;
-  background: white;
   margin-top: 20rpx;
   font-size: 14px;
   display: flex;
+}
+.yhq{
+  position: relative;
+  top: -70rpx;
+  z-index: 11;
+  opacity: 0
+}
+.section:nth-child(1){
+ background: #605151;
+ color: white
 }
 .sections1{
   width: 312rpx;
@@ -54,6 +63,7 @@ border: none;
 }
 .zhon{
   text-align: center;
+  padding-top: 50rpx
 }
 .sections2{
    padding-top:10rpx;
@@ -240,7 +250,7 @@ border: none;
   text-align: center
 }
 .xx{
-  height: 50rpx;
+  height:80rpx;
 }
 .group text {
   display: block
@@ -256,12 +266,16 @@ border: none;
  display: inline-block;
   margin-right: 20rpx;
 }
-.yhq{
+.button{
   width: 184rpx;
-  height: 68rpx;
-  background-image: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/f3.png?sign=8848d3a0064c453db9844e8cc2fc8fa3&t=1543381157);
+  height:58rpx;
+  background-image: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/hs3.PNG?sign=147caec5aef9ba1aa43ac397db7a45ea&t=1543456676);
   background-size:184rpx 68rpx;
-  font-size: 14px;
+  font-size: 12px;
+  padding-bottom: 10rpx;
+  padding-top: 8rpx;
+  position: relative;
+  top: 10rpx
 }
 .tits{
   text-decoration:line-through
@@ -270,4 +284,14 @@ border: none;
   border-radius: 5%;
   overflow: hidden;
   font-size: 0;
+}
+.yuan{
+  text-align: center;
+  width:80rpx;
+  margin-left: 20rpx;
+}
+.yh{
+  margin-top: -5rpx;
+  position: relative;
+  left: -6rpx;
 }

@@ -1,4 +1,4 @@
-<zan-search placeholder="搜索..." searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};" inputStyle="height: 56rpx; border-radius: 8rpx;" bindtap="onSearch" disabled="true"/>
+ <zan-search placeholder="搜索..." searchStyle="height: 88rpx; padding: 0 30rpx; background: {{ searchbg || '#F2F2F2' }};" inputStyle="height: 56rpx; border-radius: 8rpx;" bindtap="onSearch" disabled="true"/>
 
 <!-- 轮播图 -->
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -20,11 +20,17 @@
   </navigator>
   </block>
   <view class='big flex'>
+  <navigator url='../xinren/xinren'>
     <view class='section jh'>
       <view class='sections1 sections'>
         <view class='zhon'>
           <text>新人大礼包</text>
-          <button class='xx yhq' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" bindtap='handleClick'>20元优惠券</button>
+          <view class='button flex'>
+           <view class='yhqs flex2'><text class='yuan'>20元</text><text class='yuan'>优惠券</text></view>
+           <view class='yh flex3'><text class='yua'>立即</text><text class='yua'>领取</text></view>
+          </view>
+          <button class='xx yhq' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" bindtap='handleClick'>
+          </button>
         </view>
       </view>
       <view class='sections2 flex3'>
@@ -33,6 +39,7 @@
          <image src='../../img/a1.jpg'></image>
       </view>
     </view>
+    </navigator>
     <view class='section jh sectio'>
       <view class='zy'>
         <view>
@@ -72,7 +79,7 @@
     </view>
   </view>
   <view class='tp'>
-    <image src='../../img/a1.jpg'></image>
+    <image src='https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/hs2.JPG?sign=488b3115cfc0b525f3ee576d027fceaa&t=1543459439'></image>
   </view>
   <view class='t-title'>
     <text>大牌化妆品</text>
@@ -95,5 +102,4 @@
      
     </view>
    </block>
-  
 </view>

@@ -1,0 +1,33 @@
+<view class="container">
+  <view class='head flex'>
+    <view class='heads'>
+    </view>
+    <view class='heads'></view>
+    <view class='heads'></view>
+  </view>
+  <button>立即领取</button>
+  <view class='center flex'>
+    <view class='xian'></view>
+    <view class='tit'>
+       <text>新人专属  用券立减</text>
+    </view>
+    <view class='xian'></view>
+  </view>
+  <view class='bottom flex'>
+    <view class='bottoms'>
+      <view class='zw'>
+        暂无
+      </view>
+    </view>
+    <view class='bottoms'>
+      <view class='zw'>
+        暂无
+      </view>
+    </view>
+    <view class='bottoms'>
+      <view class='zw'>
+        暂无
+      </view>
+    </view>
+  </view>
+</view>

@@ -23,7 +23,7 @@ Page({
   onLoad: function (options) {
     this.recommend();
     this.getRecommend();
-    
+    this.getTimeBuy();
     let endTimeList = [];
     // 将活动的结束时间参数提成一个单独的数组，方便操作
     goodsList.forEach(o => { endTimeList.push(o.actEndTime) })
@@ -31,6 +31,19 @@ Page({
     // 执行倒计时函数
     this.countDown();
   },
+  /**
+   * 掌上抢
+   */
+  getTimeBuy:function(){
+    db.collection('images').where({
+      sign:'掌上抢'
+    }).get().then(res =>{
+      console.log(res)
+    })
+  },
+  /**
+   * 推荐榜商品
+   */
   getRecommend:function(){
     db.collection('recommend').get().then(res =>{
       this.setData({

@@ -1,4 +1,4 @@
-var imgload = require('./until.js')
+
 const db = wx.cloud.database();
 const app = getApp()
 
@@ -15,22 +15,11 @@ Page({
     interval: 5000,
     duration: 1000,
     countDownList: [],
-    actEndTimeList: [],
-    img: {}
+    actEndTimeList: []
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  //当图片加载完成后会调用imageLoad函数
-  imageLoad: function (e) {
-    var that = this;
-    //imageLoad(e,zhi,img,or)
-    //--e:图片加载完成后触发事件；zhi:你要固定的宽(高)的值，img:保存图片的宽高值的变量，or:想要固定的宽(width),高(height)默认为固定宽
-    var imgs = imgload.imageLoad(e, 200, this.data.images, 'height')
-    this.setData({
-      img: imgs
-    });
-  },
   onLoad: function (options) {
     this.recommend();
     this.getRecommend();
@@ -49,14 +38,7 @@ Page({
     db.collection('images').where({
       sign:'掌上抢'
     }).get().then(res =>{
-      var result = [];
-      for(var i = 0, len = res.data.length; i < len; i +=4) {
-        result.push(res.data.slice(i,i + 4));
-      }
-      this.setData({
-        zsqList1:result[0],
-        zsqList2: result[1]
-      })
+      console.log(res)
     })
   },
   /**
@@ -162,6 +144,7 @@ Page({
    * 添加到购物车
    */
   addShoppingCart: function(options){
+    console.log(options.target.id)
     db.collection('shoppingCart').where({
       _openid: app.globalData.openId,
       itemId: options.target.id

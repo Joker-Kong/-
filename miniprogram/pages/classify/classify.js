@@ -23,14 +23,22 @@ Page({
         classList:res.data
       })
     })
-
+    //初加载
+    db.collection('items').where({
+      classify: '护肤'
+    }).get().then(res => {
+      console.log(res)
+      this.setData({
+        flcp: res.data
+      })
+    })
+    
   },
   /**
    * 获取各分类产品
    */
   chooseClassify:function(parameter){
     var id = parameter.target.dataset.id
-      
      db.collection('items').where({
        classify: parameter.target.dataset.key
      }).get().then(res =>{

@@ -13,34 +13,34 @@ Page({
     // 默认展示数据
     hasList: true,
     // 商品列表数据
-    list: [{
-      id: 1,
-      title: '园艺大师抗皱精华露',
-      image: '../../img/a1.jpg',
-      pro_name: "30ml",
-      num: 1,
-      price: 180,
-      selected: true
-    },
-    {
-      id: 2,
-      title: '伊芙琳玫瑰护手霜',
-      image: '../../img/a1.jpg',
-      pro_name: "25g",
-      num: 1,
-      price: 62,
-      selected: true
-    },
-    {
-      id: 2,
-      title: '燕麦山羊乳舒缓护手霜',
-      image: '../../img/a1.jpg',
-      pro_name: "75ml",
-      num: 1,
-      price: 175,
-      selected: true
-    }
-    ],
+    // list: [{
+    //   id: 1,
+    //   title: '园艺大师抗皱精华露',
+    //   image: '../../img/a1.jpg',
+    //   pro_name: "30ml",
+    //   num: 1,
+    //   price: 180,
+    //   selected: true
+    // },
+    // {
+    //   id: 2,
+    //   title: '伊芙琳玫瑰护手霜',
+    //   image: '../../img/a1.jpg',
+    //   pro_name: "25g",
+    //   num: 1,
+    //   price: 62,
+    //   selected: true
+    // },
+    // {
+    //   id: 2,
+    //   title: '燕麦山羊乳舒缓护手霜',
+    //   image: '../../img/a1.jpg',
+    //   pro_name: "75ml",
+    //   num: 1,
+    //   price: 175,
+    //   selected: true
+    // }
+    // ],
     // 全选状态
     selectAllStatus: true, // 全选状态，默认全选
   },
@@ -52,7 +52,7 @@ Page({
     }).get().then(res => {
       console.log(res)
       this.setData({
-        // list:res.data
+        list:res.data
       })
       db.collection()
     })
@@ -95,17 +95,7 @@ Page({
             list: list
           });
           // 如果数据为空
-          if (!list.length) {
-            that.setData({
-              hasList: false
-            });
-          } else {
-            // 调用金额渲染数据
-            that.count_price();
-          }
-        } else {
-          console.log(res);
-        }
+        } 
       },
       fail: function (res) {
         console.log(res);

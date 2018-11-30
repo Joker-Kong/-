@@ -14,8 +14,9 @@
   <navigator url='../well/well?key={{item.key}}'>
     <view class='icon jh'>
     <view class='view'>
-      <image src='{{item.firstPictrue}}'></image></view>
-      <text>{{item.name}}</text>
+      <image src='{{item.firstPictrue}}'></image>
+      </view>
+      <!-- <text>{{item.name}}</text> -->
     </view>
   </navigator>
   </block>
@@ -56,13 +57,14 @@
         </view>
       </view>
       <scroll-view class="image-group" scroll-x="true">
+      <navigator url='../rob/rob'><image src="../../img/a1.jpg"></image></navigator>
+         
+         <!-- <image src="../../img/a1.jpg"></image>
          <image src="../../img/a1.jpg"></image>
          <image src="../../img/a1.jpg"></image>
          <image src="../../img/a1.jpg"></image>
          <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image>
+         <image src="../../img/a1.jpg"></image> -->
         </scroll-view>
     </view>
   </view>

@@ -48,13 +48,13 @@ border: none;
   opacity: 0
 }
 .section:nth-child(1){
- background: #605151;
+ background: #b7a6ce;
  color: white
 }
 .sections1{
   width: 312rpx;
   height:216rpx;
-  border-right: 1px black solid;
+  border-right: 1px white solid;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -271,7 +271,7 @@ border: none;
   height:58rpx;
   background-image: url(https://7465-test-a9be2a-1258153013.tcb.qcloud.la/其他/hs3.PNG?sign=147caec5aef9ba1aa43ac397db7a45ea&t=1543456676);
   background-size:184rpx 68rpx;
-  font-size: 12px;
+  font-size: 16rpx;
   padding-bottom: 10rpx;
   padding-top: 8rpx;
   position: relative;
@@ -291,7 +291,7 @@ border: none;
   margin-left: 20rpx;
 }
 .yh{
-  margin-top: -5rpx;
+  margin-top:4rpx;
   position: relative;
-  left: -6rpx;
+  left: -14rpx;
 }

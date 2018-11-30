@@ -10,7 +10,8 @@
      "pages/details/details",
      "pages/well/well",
      "pages/test/test",
-     "pages/xinren/xinren"
+     "pages/xinren/xinren",
+     "pages/rob/rob"
   ],
   "usingComponents": {
     "zan-card": "packages/card/index",

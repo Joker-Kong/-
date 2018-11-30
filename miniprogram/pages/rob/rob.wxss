@@ -1,0 +1,40 @@
+.big{
+  padding: 0rpx 20rpx 0 20rpx;
+  text-align: center;
+}
+.img{
+  background: white;
+  margin-top: 20rpx;
+}
+.imgs{
+  width: 220rpx;
+  height: 220rpx; 
+}
+.tit{
+  text-decoration:line-through;
+ font-size:24rpx;
+ color: lightgray
+}
+.money{
+  font-size: 18rpx;
+  position: relative;
+  top: -10rpx;
+  color: red
+}
+.moneys{
+  font-size: 12px;
+  margin-left: 10rpx;
+  color: lightgray
+}
+.rmb{
+  font-size:20rpx;
+  color: red;
+}
+.title{
+  font-weight: bold;
+  font-size: 28rpx;
+  margin-top: -15rpx;
+}
+.qian{
+  margin-top: -15rpx;
+}

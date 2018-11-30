@@ -1,0 +1,38 @@
+<view class="big flex">
+   <view class='img'>
+     <image class="imgs" src='../../img/a1.jpg'></image>
+     <view class='title'>实惠好货</view>
+     <view class='qian'>
+     <text class='money'>￥</text><text class='rmb'>18</text>
+     
+     <text class='moneys'>￥</text><text class='tit'>28</text></view>
+     
+   </view>
+   <view class='img'>
+     <image class="imgs" src='../../img/a1.jpg'></image>
+     <view class='title'>实惠好货</view>
+     <view class='qian'>
+     <text class='money'>￥</text><text class='rmb'>18</text>
+     
+     <text class='moneys'>￥</text><text class='tit'>28</text></view>
+     
+   </view>
+   <view class='img'>
+     <image class="imgs" src='../../img/a1.jpg'></image>
+     <view class='title'>实惠好货</view>
+     <view class='qian'>
+     <text class='money'>￥</text><text class='rmb'>18</text>
+     
+     <text class='moneys'>￥</text><text class='tit'>28</text></view>
+     
+   </view>
+   <view class='img'>
+     <image class="imgs" src='../../img/a1.jpg'></image>
+     <view class='title'>实惠好货</view>
+     <view class='qian'>
+     <text class='money'>￥</text><text class='rmb'>18</text>
+     
+     <text class='moneys'>￥</text><text class='tit'>28</text></view>
+     
+   </view>
+</view>

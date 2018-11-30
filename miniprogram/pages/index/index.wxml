@@ -16,7 +16,6 @@
     <view class='view'>
       <image src='{{item.firstPictrue}}'></image>
       </view>
-      <!-- <text>{{item.name}}</text> -->
     </view>
   </navigator>
   </block>
@@ -56,7 +55,7 @@
           </view>
         </view>
       </view>
-      <scroll-view class="image-group" scroll-x="true">
+      <!-- <scroll-view class="image-group" scroll-x="true">
       <navigator url='../rob/rob'><image src="../../img/a1.jpg"></image></navigator>
          
          <!-- <image src="../../img/a1.jpg"></image>
@@ -65,7 +64,23 @@
          <image src="../../img/a1.jpg"></image>
          <image src="../../img/a1.jpg"></image>
          <image src="../../img/a1.jpg"></image> -->
-        </scroll-view>
+        <!-- </scroll-view> -->
+        <swiper class='lun' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block>
+    <swiper-item class="image-group">
+        <image src="../../img/a1.jpg" class="slide-image"/>
+        <image src="../../img/a1.jpg" class="slide-image"/>
+         <image src="../../img/a1.jpg" class="slide-image" />
+        <image src="../../img/a1.jpg" class="slide-image"/>
+    </swiper-item>
+    <swiper-item class="image-group">
+        <image src="../../img/a1.jpg" class="slide-image"/>
+        <image src="../../img/a1.jpg" class="slide-image"/>
+         <image src="../../img/a1.jpg" class="slide-image"/>
+        <image src="../../img/a1.jpg" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
     </view>
   </view>
 </view>

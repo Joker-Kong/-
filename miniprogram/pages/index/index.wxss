@@ -299,3 +299,7 @@ border: none;
 .lun{
   height:225rpx;
 }
+.luns img{
+  width: 22rpx;
+  height: 86rpx;
+}

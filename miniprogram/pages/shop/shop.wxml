@@ -1,17 +1,41 @@
-<view class="contain  flex">
-<view class='c-left' >
-  <image src='../../img/a1.jpg'></image>
-</view>
-<view class='c-right'>
-  <text>新的好用的护肤神器曲面如</text>
-  <text>￥148.00-158.00</text>
-  <view class='btns flex'>
-  <text class='btn'>结算</text>
-  <text class='btn'>移除</text>
+<!-- 最外层视图pages -->
+<view class="pages">
+ 
+  <view wx:if="{{hasList}}">
 
+      <view class="list" wx:for="{{list}}" wx:key="{{index}}">
+
+        <image class='dele_edit' bindtap='deletes' data-index='{{index}}' style='display:{{edit_show}}' src='../../img/选择.png'></image>
+        <image  wx:if="{{item.selected}}"  data-index="{{index}}" class="radio_chek" bindtap="selectList" src='../../img/未选中圆圈.png'></image>
+                <image wx:else src='../../img/选择.png'  class="radio_chek" data-index="{{index}}" bindtap="selectList"></image>
+
+        <text class="list_name">{{item.title}}</text>
+
+        <image class="list_img" src="{{item.image}}"></image>
+
+        <text class="cart_g_name">规格 : {{item.pro_name}}</text>
+        <text class="list_price">￥{{item.price}}</text>
+        <view style='display:{{show_edit}}'>
+        <view class="carts-num">
+        </view></view>
+        <image src='../../img/删除.png' class="list_del" bindtap="deletes" data-index="{{index}}"></image>
+          
+    </view>
+    <view class="cont_bot flex">
+    <!-- 全选ICON -->
+    <image wx:if="{{selectAllStatus}}"  class="total-select" bindtap="selectAll" src='../../img/未选中圆圈.png'></image>
+          <image  wx:else  class="total-select" bindtap="selectAll"src='../../img/选择.png'></image>
+      <text class='sel_count_name'>全选</text>
+      <button class='button'>去结算</button>
+      </view>
   </view>
+  
+  <view wx:else>
+    <view class="list_none">购物车是空的哦~</view>
+  </view>
+ 
 </view>
-</view>
+  
 <view class='cnxh '>
    <image src='../../img/t1.png'></image>
    <text>猜你喜欢</text>

@@ -30,7 +30,6 @@ page{
 .flex5{
   display: flex;
   justify-content:space-around;
-  flex-wrap: wrap
 }
 .img2{
   width: 48rpx;
@@ -121,6 +120,7 @@ page{
   background: linear-gradient(to left,  #d22a1a 0%, #e88d18 100%);
   text-align: center;
   color: white;
+  border-radius: 5%;
 }
 .biggest{
   padding:0 20rpx 20rpx 20rpx

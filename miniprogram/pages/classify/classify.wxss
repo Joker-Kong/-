@@ -17,6 +17,11 @@ height:100%;
 .nav .nav-scroll {
 overflow:scroll;
 }
+.nav .nav-scroll view{
+  text-align: center;
+  height: 116rpx;
+  line-height: 116rpx;
+}
 .big .nav .nav-item {
 text-align:center;
 width:100%;

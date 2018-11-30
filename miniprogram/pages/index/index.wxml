@@ -55,31 +55,25 @@
           </view>
         </view>
       </view>
-      <!-- <scroll-view class="image-group" scroll-x="true">
-      <navigator url='../rob/rob'><image src="../../img/a1.jpg"></image></navigator>
-         
-         <!-- <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image>
-         <image src="../../img/a1.jpg"></image> -->
-        <!-- </scroll-view> -->
+       <navigator url='../rob/rob'>
         <swiper class='lun' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <swiper-item class="luns flex5">
-    
+
       <block wx:for='{{zsqList1}}'>
-        <image src='{{item.url}}' mode='scaleToFill'></image>
+     
+        <image src='{{item.url}}'  bindload="imageLoad" style="width:{{ img[index].width }}rpx; height:{{ img[index].height }}rpx;"  data-index="{{ index }}" ></image>
       </block>
     </swiper-item> 
        <swiper-item class="luns flex5">
     
       <block wx:for='{{zsqList2}}'>
-        <image src='{{item.url}}' mode='scaleToFill'></image>
+        <image src='{{item.url}}' bindload="imageLoad" 
+        style="width:{{ img[index].width }}rpx; height:{{ img[index].height }}rpx" data-index="{{ index }}" ></image>
       </block>
     </swiper-item> 
     
 </swiper>
+</navigator>
     </view>
   </view>
 </view>

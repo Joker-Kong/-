@@ -131,7 +131,6 @@ Page({
    * 添加到购物车
    */
   addShoppingCart: function(options){
-    console.log(options.target.id)
     db.collection('shoppingCart').where({
       _openid: app.globalData.openId,
       itemId: options.target.id

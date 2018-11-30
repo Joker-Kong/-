@@ -46,7 +46,6 @@ Page({
   },
 
   onLoad: function(parameter) {
-    this.getShopping();
     
   },
   /**
@@ -80,11 +79,12 @@ Page({
       )
   },
   onShow() {
-    wx.showToast({
-      title: '加载中',
-      icon: "loading",
-      duration: 1000
-    })
+    // wx.showToast({
+    //   title: '加载中',
+    //   icon: "loading",
+    //   duration: 1000
+    // })
+    this.getShopping();
   },
   /**
    * 当前商品选中事件

@@ -13,6 +13,9 @@ Page({
   onLoad: function (options) {
     this.getClassify();
   },
+  onShow:function(){
+    console.log(123)
+  },
   /**
    * 获取分类
    */

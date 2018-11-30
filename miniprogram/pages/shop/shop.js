@@ -62,6 +62,23 @@ Page({
       })
     })
   },
+  /**
+   * 删除购物车收藏
+   */
+  deleteShoppingItem:function(parameter){
+    console.log(parameter)
+    db.collection('shoppingCart').doc(parameter.id).remove()
+      .then(
+        wx.showToast({
+        title: '移除成功',
+        })
+      )
+      .catch(
+      wx.showToast({
+        title: '移除失败',
+      })
+      )
+  },
   onShow() {
     wx.showToast({
       title: '加载中',

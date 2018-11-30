@@ -27,6 +27,11 @@ page{
    padding-top: 20rpx;
   flex-direction:column;
 }
+.flex5{
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap
+}
 .img2{
   width: 48rpx;
   height:38rpx;

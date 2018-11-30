@@ -39,6 +39,14 @@ Page({
       sign:'掌上抢'
     }).get().then(res =>{
       console.log(res)
+      var result = [];
+      for(var i = 0, len = res.data.length; i < len; i +=4) {
+        result.push(res.data.slice(i,i + 4));
+      }
+      this.setData({
+        zsqList1:result[0],
+        zsqList2: result[1]
+      })
     })
   },
   /**

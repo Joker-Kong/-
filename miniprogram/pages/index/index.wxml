@@ -66,20 +66,19 @@
          <image src="../../img/a1.jpg"></image> -->
         <!-- </scroll-view> -->
         <swiper class='lun' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block>
-    <swiper-item class="image-group">
-        <image src="../../img/a1.jpg" class="slide-image"/>
-        <image src="../../img/a1.jpg" class="slide-image"/>
-         <image src="../../img/a1.jpg" class="slide-image" />
-        <image src="../../img/a1.jpg" class="slide-image"/>
-    </swiper-item>
-    <swiper-item class="image-group">
-        <image src="../../img/a1.jpg" class="slide-image"/>
-        <image src="../../img/a1.jpg" class="slide-image"/>
-         <image src="../../img/a1.jpg" class="slide-image"/>
-        <image src="../../img/a1.jpg" class="slide-image"/>
-    </swiper-item>
-  </block>
+    <swiper-item class="luns flex5">
+    
+      <block wx:for='{{zsqList1}}'>
+        <image src='{{item.url}}' mode='scaleToFill'></image>
+      </block>
+    </swiper-item> 
+       <swiper-item class="luns flex5">
+    
+      <block wx:for='{{zsqList2}}'>
+        <image src='{{item.url}}' mode='scaleToFill'></image>
+      </block>
+    </swiper-item> 
+    
 </swiper>
     </view>
   </view>

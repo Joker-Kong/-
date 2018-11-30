@@ -132,26 +132,41 @@ Page({
    */
   addShoppingCart: function(options){
     console.log(options.target.id)
-    
-    db.collection('shoppingCart').add({
-      data:{
-        itemId: options.target.id,
-        firstPictrue: options.target.dataset.image,
-        price: options.target.dataset.price
-      }
-    }).then(res =>{
-      wx.showToast({
-        title: '成功添加购物车',
-        icon: 'success',
-        duration: 1000
-      })
-      }).catch(error => {
-        wx.showToast({
-          title: '添加失败',
-          icon: 'fail',
-          duration: 1000
+    db.collection('shoppingCart').where({
+      _openid: app.globalData.openId,
+      itemId: options.target.id
+    }).count().then(res =>{
+      console.log(res.total)
+      if(res.total<=0){
+        db.collection('shoppingCart').add({
+          data: {
+            itemId: options.target.id,
+            firstPictrue: options.target.dataset.image,
+            price: options.target.dataset.price
+          }
+        }).then(res => {
+          wx.showToast({
+            title: '成功添加购物车',
+            icon: 'success',
+            duration: 2000
+          })
+        }).catch(error => {
+          wx.showToast({
+            title: '添加失败',
+            icon: 'fail',
+            duration: 2000
+          })
         })
-      })
+      }else{
+        wx.showToast({
+          title: '已经在购物车了',
+          icon: 'fail',
+          duration: 2000
+        })
+      }
+    })
+
+   
   },                                    
   /**
    * 跳转搜索页面

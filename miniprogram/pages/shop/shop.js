@@ -46,15 +46,20 @@ Page({
   },
 
   onLoad: function(parameter) {
-    console.log(parameter)
-     db.collection('shoppingCart').where({
+    this.getShopping();
+    
+  },
+  /**
+   * 加载购物车
+   */
+  getShopping:function(){
+    db.collection('shoppingCart').where({
       _openid: app.globalData.openId
     }).get().then(res => {
       console.log(res)
       this.setData({
         // list:res.data
       })
-      db.collection()
     })
   },
   onShow() {

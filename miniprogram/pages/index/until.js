@@ -1,4 +1,4 @@
-function imageLoad(e, zhi, img, or) {
+function imageLoads(e, zhi, img, or) {
   var windowWidth = 0;
   wx.getSystemInfo({
     success: function (res) {
@@ -24,5 +24,5 @@ function imageLoad(e, zhi, img, or) {
   return image;
 }
 module.exports = {
-  imageLoad: imageLoad
+  imageLoads: imageLoads
 }

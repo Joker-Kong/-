@@ -9,9 +9,8 @@ Page({
     edit_name: "编辑",
     edit_show: "none",
     // list: [],               // 购物车列表
-    // hasList: false,          // 列表是否有数据
+     hasList: true,          // 列表是否有数据
     // 默认展示数据
-    hasList: true,
     // 商品列表数据
     // list: [{
     //   id: 1,
@@ -46,7 +45,7 @@ Page({
   },
 
   onLoad: function(parameter) {
-    
+
   },
   /**
    * 加载购物车
@@ -55,6 +54,7 @@ Page({
     db.collection('shoppingCart').where({
       _openid: app.globalData.openId
     }).get().then(res => {
+      console.log(2222222)
       console.log(res)
       this.setData({
         list:res.data

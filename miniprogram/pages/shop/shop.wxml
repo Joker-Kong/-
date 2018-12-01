@@ -12,8 +12,6 @@
         <text class="list_name">{{item.name}}</text>
 
         <image class="list_img" src="{{item.firstPictrue}}"></image>
-
-        <!-- <text class="cart_g_name">规格 : {{item.pro_name}}</text> -->
         <text class="list_price">￥{{item.price}}</text>
         <view style='display:{{show_edit}}'>
         <view class="carts-num">
@@ -23,19 +21,16 @@
     </view>
     <view class="cont_bot flex">
     <!-- 全选ICON -->
-    <image wx:if="{{selectAllStatus}}"  class="total-select" bindtap="selectAll" src='../../img/未选中圆圈.png'></image>
+     <image wx:if="{{selectAllStatus}}"  class="total-select" bindtap="selectAll" src='../../img/未选中圆圈.png'></image>
           <image  wx:else  class="total-select" bindtap="selectAll"src='../../img/选择.png'></image>
       <text class='sel_count_name'>全选</text>
       <button class='button'>去结算</button>
       </view>
   </view>
-  
   <view wx:else>
     <view class="list_none">购物车是空的哦~</view>
   </view>
- 
 </view>
-  
 <view class='cnxh '>
    <image src='../../img/t1.png'></image>
    <text>猜你喜欢</text>
@@ -43,5 +38,6 @@
 <view class='biggest flex'>
   <view class='flex3 small b-big'><image src='../../img/a1.jpg'></image><text>护舒宝</text><text>15.00</text></view>
   <view class='flex3 small b-big'><image src='../../img/a1.jpg'></image><text>打包sod密</text><text>50.00</text></view>
-</view>
+</view> 
+
 

@@ -1,7 +1,7 @@
 
 const db = wx.cloud.database();
 const app = getApp()
-
+var imgload=require('until.js')
 let goodsList = [
   { actEndTime: '2019/12/31 12:00:43' }
 ]
@@ -15,7 +15,15 @@ Page({
     interval: 5000,
     duration: 1000,
     countDownList: [],
-    actEndTimeList: []
+    actEndTimeList: [],
+    img:{}
+  },
+  imageLoad:function(e){
+    var that=this
+    var imgs = imgload.imageLoads(e,200,this.data.images,"height");
+    this.setData({
+      img:imgs
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -34,20 +42,28 @@ Page({
   /**
    * 掌上抢
    */
-  getTimeBuy:function(){
+  getTimeBuy: function () {
     db.collection('images').where({
-      sign:'掌上抢'
-    }).get().then(res =>{
-      console.log(res)
+      sign: '掌上抢'
+    }).get().then(res => {
+      var result = [];
+      for (var i = 0, len = res.data.length; i < len; i +=4) {
+        result.push(res.data.slice(i, i + 4));
+      }
+      console.log(result)
+       this.setData({
+         zsqList1: result[0],
+         zsqList2: result[1]
+       })
     })
   },
   /**
    * 推荐榜商品
    */
-  getRecommend:function(){
-    db.collection('recommend').get().then(res =>{
+  getRecommend: function () {
+    db.collection('recommend').get().then(res => {
       this.setData({
-        recommend:res.data
+        recommend: res.data
       })
     }).catch(console.log)
   },
@@ -57,7 +73,7 @@ Page({
   /**
    * 倒计时函数
    */
-  countDown(){
+  countDown() {
     // 获取当前时间，同时得到活动结束时间数组
     let newTime = new Date().getTime() || new Date(date.replace(/-/g, '/')).getTime();
     let endTimeList = this.data.actEndTimeList;
@@ -95,62 +111,62 @@ Page({
   /**
    * 热销推荐
    */
-  recommend:function(){
+  recommend: function () {
     db.collection('items').where({
-      recommend:true
-    }).get().then(res =>{
+      recommend: true
+    }).get().then(res => {
       console.log(res.data)
       this.setData({
-        images:res.data
+        images: res.data
       })
-    }).catch(erro =>{
-      
+    }).catch(erro => {
+
     })
   },
-  
-    /**
-   * 获取用户信息
-   */
-    onGotUserInfo: function(event) {
-      db.collection('userInfo').where({
-        _openid: app.globalData.openId
-      }).count().then(res => {
-          if (res.total <= 0) {
-            db.collection('userInfo').add({
-              data: {
-                nickName: event.detail.userInfo.nickName,
-                gender: event.detail.userInfo.gender,
-                city: event.detail.userInfo.city,
-                province: event.detail.userInfo.province,
-                country: event.detail.userInfo.country,
-                language: event.detail.userInfo.language,
-                avatarUrl: event.detail.userInfo.avatarUrl,
-                isNewUser: false,
-                coupon: 20
-              }
-            }).then(res => {
-              wx.showToast({
-                title: '领取成功！',
-              })
-            }).catch(console.error)
-          } else {
-            wx.showToast({
-              title: '您已领取过了',
-            })
+
+  /**
+ * 获取用户信息
+ */
+  onGotUserInfo: function (event) {
+    db.collection('userInfo').where({
+      _openid: app.globalData.openId
+    }).count().then(res => {
+      if (res.total <= 0) {
+        db.collection('userInfo').add({
+          data: {
+            nickName: event.detail.userInfo.nickName,
+            gender: event.detail.userInfo.gender,
+            city: event.detail.userInfo.city,
+            province: event.detail.userInfo.province,
+            country: event.detail.userInfo.country,
+            language: event.detail.userInfo.language,
+            avatarUrl: event.detail.userInfo.avatarUrl,
+            isNewUser: false,
+            coupon: 20
           }
+        }).then(res => {
+          wx.showToast({
+            title: '领取成功！',
+          })
         }).catch(console.error)
+      } else {
+        wx.showToast({
+          title: '您已领取过了',
+        })
+      }
+    }).catch(console.error)
   },
   /**
    * 添加到购物车
    */
-  addShoppingCart: function(options){
+  addShoppingCart: function (options) {
     console.log(options.target.id)
     db.collection('shoppingCart').where({
       _openid: app.globalData.openId,
       itemId: options.target.id
-    }).count().then(res =>{
+    }).count().then(res => {
       console.log(res.total)
-      if(res.total<=0){
+      if (res.total <= 0) {
         db.collection('shoppingCart').add({
           data: {
             itemId: options.target.id,
@@ -170,7 +186,7 @@ Page({
             duration: 2000
           })
         })
-      }else{
+      } else {
         wx.showToast({
           title: '已经在购物车了',
           icon: 'fail',
@@ -179,8 +195,8 @@ Page({
       }
     })
 
-   
-  },                                    
+
+  },
   /**
    * 跳转搜索页面
    */
@@ -189,16 +205,16 @@ Page({
       url: '../search/search'
     })
   },
-  handleClick(e){
-    
-  var index= e.currentTarget.dataset.id
+  handleClick(e) {
+
+    var index = e.currentTarget.dataset.id
   },
   onShareAppMessage: function () {
     return {
       title: '婷美小屋',
       desc: '属于您的化妆品商城!'
     }
-  }  
+  }
 })
 
 

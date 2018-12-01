@@ -48,7 +48,7 @@
         <view class='qiang'>
           <text class='tit'>12点场</text>
           <text class='tit'>距离下场</text>
-          <view class='shijian' wx:for="{{countDownList}}" wx:key="countDownList">
+          <view class='shijian' wx:for="{{countDownList}}">
             <text class='shi sj'>{{item.hou}}</text>:
             <text class='fen sj'>{{item.min}}</text>:
             <text class='miao sj'>{{item.sec}}</text>

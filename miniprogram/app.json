@@ -11,7 +11,8 @@
      "pages/well/well",
      "pages/test/test",
      "pages/xinren/xinren",
-     "pages/rob/rob"
+     "pages/rob/rob",
+     "pages/list/list"
   ],
   "usingComponents": {
     "zan-card": "packages/card/index",

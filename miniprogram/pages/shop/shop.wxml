@@ -2,34 +2,33 @@
 <view class="pages">
  
   <view wx:if="{{hasList}}">
-
+      <!-- 列表 -->
       <view class="list" wx:for="{{list}}" wx:key="{{index}}">
-
-        <image class='dele_edit' bindtap='deletes' data-index='{{index}}' style='display:{{edit_show}}' src='../../img/选择.png'></image>
-        <image  wx:if="{{item.isSelect}}"  data-index="{{index}}" class="radio_chek" bindtap="selectList" src='../../img/未选中圆圈.png'></image>
-                <image wx:else src='../../img/选择.png'  class="radio_chek" data-index="{{index}}" bindtap="selectList"></image>
-
+        <image class='dele_edit' bindtap='deletes' data-index='{{index}}' src='../../img/删除.png'></image>
+        <image  wx:if="{{item.isSelect}}"  data-index="{{index}}" class="radio_chek" bindtap="selectList" src='../../img/选择.png'></image>
+                <image wx:else src='../../img/未选中圆圈.png'  class="radio_chek" data-index="{{index}}" bindtap="selectList"></image>
+        <!-- 列表标题 -->
         <text class="list_name">{{item.name}}</text>
-
+        <!-- 列表商品图片 -->
         <image class="list_img" src="{{item.firstPictrue}}"></image>
+        <!-- 价格 -->
         <text class="list_price">￥{{item.price}}</text>
-        <view style='display:{{show_edit}}'>
-        <view class="carts-num">
-        </view></view>
-        <image src='../../img/删除.png' class="list_del" bindtap="deletes" data-index="{{index}}"></image>
-          
     </view>
+<!-- 固定底部 -->
     <view class="cont_bot flex">
     <!-- 全选ICON -->
-     <image wx:if="{{selectAllStatus}}"  class="total-select" bindtap="selectAll" src='../../img/未选中圆圈.png'></image>
-          <image  wx:else  class="total-select" bindtap="selectAll"src='../../img/选择.png'></image>
+    <image wx:if="{{selectAllStatus}}"  class="total-select" bindtap="selectAll" src='../../img/选择.png'></image>
+          <image  wx:else  class="total-select" bindtap="selectAll"src='../../img/未选中圆圈.png'></image>
       <text class='sel_count_name'>全选</text>
-      <button class='button'>去结算</button>
+      <!-- 合计金额 -->
+    <button class='button' bindtap='getOrder'>去结算</button>
       </view>
+     
   </view>
   <view wx:else>
     <view class="list_none">购物车是空的哦~</view>
   </view>
+ 
 </view>
 <view class='cnxh '>
    <image src='../../img/t1.png'></image>
@@ -38,6 +37,4 @@
 <view class='biggest flex'>
   <view class='flex3 small b-big'><image src='../../img/a1.jpg'></image><text>护舒宝</text><text>15.00</text></view>
   <view class='flex3 small b-big'><image src='../../img/a1.jpg'></image><text>打包sod密</text><text>50.00</text></view>
-</view> 
-
-
+</view>

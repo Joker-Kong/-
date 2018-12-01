@@ -1,0 +1,6 @@
+.big{
+  padding: 20rpx 0rpx 20rpx 0rpx;
+}
+.test-card{
+  border-bottom: 1px lightgray solid
+}

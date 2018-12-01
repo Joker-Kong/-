@@ -6,46 +6,14 @@ Page({
 
   data: {
     show_edit: "block",
-    edit_name: "编辑",
-    edit_show: "none",
-    // list: [],               // 购物车列表
+    list: [],               // 购物车列表
      hasList: true,          // 列表是否有数据
-    // 默认展示数据
-    // 商品列表数据
-    // list: [{
-    //   id: 1,
-    //   title: '园艺大师抗皱精华露',
-    //   image: '../../img/a1.jpg',
-    //   pro_name: "30ml",
-    //   num: 1,
-    //   price: 180,
-    //   selected: true
-    // },
-    // {
-    //   id: 2,
-    //   title: '伊芙琳玫瑰护手霜',
-    //   image: '../../img/a1.jpg',
-    //   pro_name: "25g",
-    //   num: 1,
-    //   price: 62,
-    //   selected: true
-    // },
-    // {
-    //   id: 2,
-    //   title: '燕麦山羊乳舒缓护手霜',
-    //   image: '../../img/a1.jpg',
-    //   pro_name: "75ml",
-    //   num: 1,
-    //   price: 175,
-    //   selected: true
-    // }
-    // ],
     // 全选状态
-    selectAllStatus: true, // 全选状态，默认全选
+    selectAllStatus: true // 全选状态，默认全选
   },
 
   onLoad: function(parameter) {
-
+    this.getShopping();
   },
   /**
    * 加载购物车
@@ -54,11 +22,27 @@ Page({
     db.collection('shoppingCart').where({
       _openid: app.globalData.openId
     }).get().then(res => {
-      console.log(2222222)
-      console.log(res)
       this.setData({
         list:res.data
       })
+    })
+   
+  },
+  getOrder() {
+    // 初始化toastStr字符串
+    var toastStr = [];
+    // 遍历取出已勾选的cid
+    for (var i = 0; i < this.data.list.length; i++) {
+      if (this.data.list[i].isSelect) {
+        toastStr.push(this.data.list[i])
+      }
+    }  
+    //存回data
+    this.setData({
+      toastStr
+    });
+    wx.navigateTo({
+       url: '../order/order?carts=' + JSON.stringify(toastStr)
     })
   },
   /**
@@ -75,28 +59,34 @@ Page({
       .catch(
       wx.showToast({
         title: '移除失败',
-      })
+      })       
       )
   },
   onShow() {
-    // wx.showToast({
-    //   title: '加载中',
-    //   icon: "loading",
-    //   duration: 1000
-    // })
-    this.getShopping();
+    wx.showToast({
+      title: '加载中',
+      icon: "loading",
+      duration: 1000
+    })
+
   },
   /**
    * 当前商品选中事件
    */
   selectList(e) {
-    const index = e.currentTarget.dataset.index;    // 获取data- 传进来的index
+    const index = e.currentTarget.dataset.index;   // 获取data- 传进来的index
     let list = this.data.list;                    // 获取购物车列表
-    const selected = list[index].selected;         // 获取当前商品的选中状态
-    list[index].selected = !selected;              // 改变状态
+    const isSelect = list[index].isSelect;         // 获取当前商品的选中状态
+    list[index].isSelect = !isSelect;              // 改变状态
     this.setData({
-      list: list
+      list
     });
+
+    // 重新渲染数据
+    this.setData({
+      list: list,
+      selectAllStatus: this.data.selectAllStatus
+    })
   },
   // 删除
   deletes: function (e) {
@@ -116,7 +106,6 @@ Page({
           that.setData({
             list: list
           });
-          // 如果数据为空
         } 
       },
       fail: function (res) {
@@ -124,9 +113,6 @@ Page({
       }
     })
   },
-
-
-
   /**
    * 购物车全选事件
    */
@@ -135,16 +121,17 @@ Page({
     let selectAllStatus = this.data.selectAllStatus;
     // true  -----   false
     selectAllStatus = !selectAllStatus;
+    
     // 获取商品数据
     let list = this.data.list;
     // 循环遍历判断列表中的数据是否选中
     for (let i = 0; i < list.length; i++) {
-      list[i].selected = selectAllStatus;
+      list[i].isSelect = selectAllStatus;
     }
     // 页面重新渲染
     this.setData({
-      selectAllStatus: selectAllStatus,
-      list: list
+      selectAllStatus,
+      list
     });
   },
   // 收藏

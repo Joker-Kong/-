@@ -5,10 +5,10 @@
 <view>
     <view class="car_item_wrap" wx:for="{{carts}}">
         <view class="car_image_wrap">
-            <image src="{{item.image}}" class="car_item_image"></image>
+            <image src="{{item.firstPictrue}}" class="car_item_image"></image>
         </view>
         <view class="car_item_title">
-            <view>{{item.title}}</view>
+            <view>{{item.name}}</view>
         </view>
         <view class="car_item_bot">
         	<text class="car_item_price">￥{{item.price}}</text>
@@ -46,7 +46,7 @@
       </zan-field>
       <view class='cell'>
     <navigator class='cell-item hh'>
-        <text>共{{ nums }}件商品</text>　
+        <text>共{{nums }}件商品</text>　
     <text>小计</text>:<text class='money'> ￥{{totalPrice}}</text>
     </navigator>
 </view>

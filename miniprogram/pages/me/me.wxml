@@ -3,7 +3,7 @@
 </view>
 <view class='divider'></view>
 <view class='cell'>
-    <navigator class='cell-item arrow' url='../order/order'>
+    <navigator class='cell-item arrow' url='../list/list'>
         <text>我的订单</text>
     </navigator>
     <navigator class='cell-item arrow'>

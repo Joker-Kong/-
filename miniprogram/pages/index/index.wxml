@@ -59,19 +59,17 @@
         <swiper class='lun' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <swiper-item class="luns flex5">
 
-      <block wx:for='{{zsqList1}}'>
+      <block wx:for='{{zsqList1}}'> 
      
         <image src='{{item.url}}'  bindload="imageLoad" style="width:{{ img[index].width }}rpx; height:{{ img[index].height }}rpx;"  data-index="{{ index }}" ></image>
-      </block>
+     </block>
     </swiper-item> 
        <swiper-item class="luns flex5">
-    
       <block wx:for='{{zsqList2}}'>
         <image src='{{item.url}}' bindload="imageLoad" 
         style="width:{{ img[index].width }}rpx; height:{{ img[index].height }}rpx" data-index="{{ index }}" ></image>
       </block>
     </swiper-item> 
-    
 </swiper>
 </navigator>
     </view>

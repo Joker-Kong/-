@@ -32,5 +32,3 @@
     </scroll-view>
   </view>
 </view>
-
-<button bindtap='chooseClassify'>测试</button>

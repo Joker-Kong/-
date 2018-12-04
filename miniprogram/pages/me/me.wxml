@@ -6,15 +6,21 @@
     <navigator class='cell-item arrow' url='../list/list'>
         <text>我的订单</text>
     </navigator>
-    <navigator class='cell-item arrow'>
+    <navigator class='cell-item arrows' bindtap='showitem'>
         <text>我的优惠券</text>
     </navigator>
+    <navigator><view class="{{open?'display_show':'display_none'}} cell-item">10元优惠券</view></navigator>
+
+    <navigator><view class="{{open?'display_show':'display_none'}} cell-item">20元优惠券</view></navigator>
 </view>
 <view class='divider'></view>
 <view class='cell'>
-    <navigator class='cell-item arrow' url='../address/address'>
+    <navigator class='cell-item arrows' bindtap='showitems'>
         <text>我的地址</text>
     </navigator>
+    <navigator><view class="{{dk?'display_show':'display_none'}} cell-item">xx省xx市xx县xx街道</view></navigator>
+
+     <navigator><view class="{{dk?'display_show':'display_none'}} cell-item">xx省xx市xx县xx街道</view></navigator>
     <navigator class='cell-item arrow'>
         <text>我的收藏</text>
     </navigator>

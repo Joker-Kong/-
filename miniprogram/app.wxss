@@ -107,7 +107,19 @@ page{
     border-right: 3rpx solid #ccc;
     transform: rotate(45deg);
 }
-
+.arrows{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrows::after{
+    content: "";
+    width: 15rpx;
+    height: 15rpx;
+    border-top: 3rpx solid #ccc;
+    border-right: 3rpx solid #ccc;
+    transform: rotate(135deg);
+}
 /* 功能封装5：水平垂直居中 */
 .cen{
     display: flex;

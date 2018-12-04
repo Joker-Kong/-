@@ -49,8 +49,8 @@ Page({
    * 删除购物车收藏
    */
   deleteShoppingItem:function(parameter){
-    console.log(parameter)
-    db.collection('shoppingCart').doc(parameter.id).remove()
+    console.log(parameter.target.id)
+    db.collection('shoppingCart').doc(parameter.target.id).remove()
       .then(
         wx.showToast({
         title: '移除成功',

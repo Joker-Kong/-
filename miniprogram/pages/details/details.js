@@ -64,7 +64,6 @@ Page({
     db.collection('items').where({
       _id: options.id
     }).get().then(res => {
-      console.log(res.data)
       this.setData({
         images: res.data[0].images,
         firstImg: res.data[0].firstPictrue,
@@ -73,18 +72,18 @@ Page({
     })
   },
   addShoppingCart: function (options) {
-    console.log(options.target.id)
+   
     db.collection('shoppingCart').where({
       _openid: app.globalData.openId,
-      itemId: options.target.id
+      itemId: this.data.lists._id
     }).count().then(res => {
-      console.log(res.total)
       if (res.total <= 0) {
         db.collection('shoppingCart').add({
           data: {
-            itemId: options.target.id,
-            firstPictrue: options.target.dataset.image,
-            price: options.target.dataset.price
+            itemId: this.data.lists._id,
+            firstPictrue: this.data.lists.firstPictrue,
+            price: this.data.lists.price,
+            name:this.data.lists.itemName
           }
         }).then(res => {
           wx.showToast({
@@ -126,5 +125,10 @@ Page({
         showPop: false
       })
     }.bind(this), 200)
+  },
+  goOrder(event) {
+    wx.navigateTo({
+      url: '../order/order?carts=' + JSON.stringify(this.data.lists)
+    })
   }
 })

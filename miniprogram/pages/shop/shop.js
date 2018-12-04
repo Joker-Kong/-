@@ -51,16 +51,21 @@ Page({
   deleteShoppingItem:function(parameter){
     console.log(parameter.target.id)
     db.collection('shoppingCart').doc(parameter.target.id).remove()
-      .then(
-        wx.showToast({
-        title: '移除成功',
-        })
-      )
-      .catch(
-      wx.showToast({
-        title: '移除失败',
-      })       
-      )
+      .then(res =>{
+        console.log()
+        if(res.stats.removed == 1){
+          wx.showToast({
+            title: '移除成功',
+          })
+          
+        } else {
+          wx.showToast({
+            title: '移除失败',
+          })
+          this.onLoad()
+        }
+        
+      })
   },
   onShow() {
     wx.showToast({

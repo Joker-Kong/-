@@ -2,13 +2,12 @@
   width: 100%;
 }
 .footer{
-  width: 730rpx;
+  width: 750rpx;
   position: fixed;
   bottom: 0;
   z-index: 1;
   display: flex;
   font-size: 15px;
-  padding-left: 20rpx;
   background: white;
 }
 .img{
@@ -16,6 +15,7 @@
 }
 .left{
   width: 340rpx;
+  margin-left: 20rpx;
 }
 .right{
  width: 370rpx;
@@ -33,4 +33,49 @@
 }
 .right view:nth-child(2){
   background:red;
+}
+.mask-layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.pop-common {
+  width: 100%;
+  /* overflow: hidden; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+.bao image{
+  width: 430rpx;
+  height:430rpx;
+}
+button{
+  padding: 0;
+  width: 750rpx;
+  height: 98rpx;
+  background:#3bac3d;
+  color:white
+}
+.bao{
+   width:100%;
+  height:500rpx;
+  text-align: center;
+}
+
+.ks{
+  font-size: 24rpx;
+}
+.gg{
+  height: 142rpx;
+  border-bottom: 1px lightgray solid;
 }

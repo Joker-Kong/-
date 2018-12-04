@@ -16,7 +16,26 @@
       </view>
     </view>
     <view class='right'>
-       <view>加入购物车</view>
+       <view bindtap='showModal'>加入购物车</view>
         <view>立即购买</view>
     </view>
+</view>
+<view class='mask-layer' wx:if="{{showPop}}" bindtap='hideModal'></view>
+<view class='pop-add-cart pop-common' wx:if="{{showPop}}" animation='{{animationData}}'>
+  <!-- <view class='header row'>
+    头部区域
+  </view> -->
+  <scroll-view class='body' scroll-y='true'>
+       <view class='bao'>
+       <view class='baos' style='height:700rpx'>
+         <image src='{{firstImg}}'></image>
+         <view class='ks'>{{lists.describe}}</view>
+         <view class='ks'>{{lists.effect}}</view>
+           <view style='font-size:30rpx;color:red'>￥89</view>
+         </view>
+       </view>
+  </scroll-view>
+  <view class='footer toolbar'>
+   <button bindtap='addShoppingCart'>确定</button>
+  </view>
 </view>

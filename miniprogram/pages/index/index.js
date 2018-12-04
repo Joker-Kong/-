@@ -8,7 +8,8 @@ let goodsList = [
 Page({
   data: {
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
+      {url: 'https://7465-test-a9be2a-1258153013.tcb.qcloud.la/首页/轮播图1.png?sign=246fd620731603d69e69964cc105365c&t=1543802052'},
+      { url: 'https://7465-test-a9be2a-1258153013.tcb.qcloud.la/首页/轮播图2.png?sign=246fd620731603d69e69964cc105365c&t=1543802052'}
     ],
     indicatorDots: true,
     autoplay: true,
@@ -63,10 +64,11 @@ Page({
    */
   getRecommend: function () {
     db.collection('recommend').get().then(res => {
+       console.log(res)
       this.setData({
         recommend: res.data
       })
-    }).catch(console.log)
+    }).catch()
   },
   timeFormat(param) {//小于10的格式化函数
     return param < 10 ? '0' + param : param;
@@ -149,13 +151,13 @@ Page({
           wx.showToast({
             title: '领取成功！',
           })
-        }).catch(console.error)
+        }).catch()
       } else {
         wx.showToast({
           title: '您已领取过了',
         })
       }
-    }).catch(console.error)
+    }).catch()
   },
   /**
    * 添加到购物车

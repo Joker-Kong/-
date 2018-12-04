@@ -15,6 +15,9 @@ Page({
   onLoad: function(parameter) {
     this.getShopping();
   },
+  onShow:function(){
+    console.log(123)
+  },
   /**
    * 加载购物车
    */
@@ -36,7 +39,7 @@ Page({
       if (this.data.list[i].isSelect) {
         toastStr.push(this.data.list[i])
       }
-    }  
+    }
     //存回data
     this.setData({
       toastStr
@@ -57,7 +60,7 @@ Page({
           wx.showToast({
             title: '移除成功',
           })
-          
+          this.onLoad()
         } else {
           wx.showToast({
             title: '移除失败',
@@ -73,7 +76,7 @@ Page({
       icon: "loading",
       duration: 1000
     })
-
+    this.onLoad()
   },
   /**
    * 当前商品选中事件

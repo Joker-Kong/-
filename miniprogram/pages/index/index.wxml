@@ -2,9 +2,9 @@
 
 <!-- 轮播图 -->
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{images}}" wx:key="{{_id}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{_id}}">
     <swiper-item>
-      <image src="{{item.firstPictrue}}" class="slide-image" width="355" height="150" />
+      <image src="{{item.url}}" class="slide-image" width="355" height="150" />
     </swiper-item>
   </block>
 </swiper>
@@ -15,6 +15,7 @@
     <view class='icon jh'>
     <view class='view'>
       <image src='{{item.firstPictrue}}'></image>
+      <text style='font-size:24rpx;'>{{item.name}}</text>
       </view>
     </view>
   </navigator>
@@ -22,22 +23,38 @@
   <view class='big flex'>
   <navigator url='../xinren/xinren'>
     <view class='section jh'>
-      <view class='sections1 sections'>
-        <view class='zhon'>
-          <text>新人大礼包</text>
+    
+      <view class='s-left flex6'>
+      <view class='gg'>
+          <view style='font-size:22rpx;'>新人大礼包</view>
+          <view style='font-size:14rpx;'>注册即领</view></view>
           <view class='button flex'>
-           <view class='yhqs flex2'><text class='yuan'>20元</text><text class='yuan'>优惠券</text></view>
-           <view class='yh flex3'><text class='yua'>立即</text><text class='yua'>领取</text></view>
+          <view class='yh'>
+            <text class='yang'>￥</text>
+            <text style='font-size:25rpx'>20</text>
+            <text class='quan'>优惠券</text>
+            </view>
+            <view class='yh1 flex6'>
+               <view>立即</view>
+               <view>领取</view>
+            </view>
           </view>
+      </view>
+       <view class='s-center flex6'>
+       <view class='gg'>
+         <view class='' style='font-size:18rpx'>新人专区</view>
+         <view class='' style='font-size:12rpx'>9.9包邮</view></view>
+         <image src='cloud://test-a9be2a.7465-test-a9be2a/首页/掌上抢2.png'></image>
+       </view>
+       <view class='s-right flex6'>
+        <view class='gg'> <view class='' style='font-size:18rpx'>新人专享价</view>
+         <view class='' style='font-size:12rpx'>爆款单品</view></view>
+         <image src='cloud://test-a9be2a.7465-test-a9be2a/首页/掌上抢8.png'></image>
+       </view>
           <button class='xx yhq' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" bindtap='handleClick'>
           </button>
-        </view>
-      </view>
-      <view class='sections2 flex3'>
-         <text>新人专享价</text>
-         <text>爆款单品，九块九包邮</text>
-         <image src='../../img/a1.jpg'></image>
-      </view>
+       
+
     </view>
     </navigator>
     <view class='section jh sectio'>
@@ -56,21 +73,23 @@
         </view>
       </view>
        <navigator url='../rob/rob'>
-        <swiper class='lun' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <swiper-item class="luns flex5">
-
-      <block wx:for='{{zsqList1}}'> 
-     
-        <image src='{{item.url}}'  bindload="imageLoad" style="width:{{ img[index].width }}rpx; height:{{ img[index].height }}rpx;"  data-index="{{ index }}" ></image>
-     </block>
-    </swiper-item> 
-       <swiper-item class="luns flex5">
-      <block wx:for='{{zsqList2}}'>
-        <image src='{{item.url}}' bindload="imageLoad" 
-        style="width:{{ img[index].width }}rpx; height:{{ img[index].height }}rpx" data-index="{{ index }}" ></image>
-      </block>
-    </swiper-item> 
-</swiper>
+     <view class='lun flexs'>
+     <view class='luns flex7'> 
+     <image src='cloud://test-a9be2a.7465-test-a9be2a/首页/掌上抢5.png'></image>
+      <text class='money1'>￥32.00</text>
+      <text class='money2'>￥50.00</text>
+     </view>
+      <view class='luns flex7'> 
+     <image src='cloud://test-a9be2a.7465-test-a9be2a/首页/掌上抢3.png'></image>
+      <text class='money1'>￥32.00</text>
+      <text class='money2'>￥50.00</text>
+     </view>
+    <view class='luns flex7'> 
+     <image src='cloud://test-a9be2a.7465-test-a9be2a/首页/掌上抢7.png'></image>
+      <text class='money1'>￥32.00</text>
+      <text class='money2'>￥50.00</text>
+     </view>
+     </view>
 </navigator>
     </view>
   </view>
@@ -97,7 +116,6 @@
 <view class='biggest flex'>
   <block wx:for="{{images}}" wx:key="{{item._id}}">
     <view class='b-big flex2'>
-    
       <navigator url="../details/details?id={{item._id}}">
       <image class="img1" src='{{item.firstPictrue}}'></image>
       </navigator>

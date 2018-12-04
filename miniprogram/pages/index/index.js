@@ -131,7 +131,7 @@ Page({
   onGotUserInfo: function (event) {
     db.collection('userInfo').where({
       _openid: app.globalData.openId
-    }).count().then(res => {
+    }).count().then(res => { 
       if (res.total <= 0) {
         db.collection('userInfo').add({
           data: {

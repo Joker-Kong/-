@@ -4,7 +4,7 @@
   <view wx:if="{{hasList}}">
       <!-- 列表 -->
       <view class="list" wx:for="{{list}}" wx:key="{{index}}">
-        <image class='dele_edit' bindtap='deletes' data-index='{{index}}' src='../../img/删除.png'></image>
+        <image class='dele_edit' bindtap='deleteShoppingItem' id='{{item._id}}' src='../../img/删除.png'></image>
         <image  wx:if="{{item.isSelect}}"  data-index="{{index}}" class="radio_chek" bindtap="selectList" src='../../img/选择.png'></image>
                 <image wx:else src='../../img/未选中圆圈.png'  class="radio_chek" data-index="{{index}}" bindtap="selectList"></image>
         <!-- 列表标题 -->

@@ -3,18 +3,23 @@ Page({
     carts: [],               // 购物车列表
     hasList: false,          // 列表是否有数据
     totalPrice: 0,           // 总价，初始为0
-    nums:0  
+    nums:0,
   },
   onLoad(option){
-    var carts = JSON.parse(option.carts)
+    if (JSON.parse(option.carts) instanceof Array){
       this.setData({
-        carts
+        carts:JSON.parse(option.carts)
       })
+    }else{
+      this.setData({
+        carts:[JSON.parse(option.carts)]
+      })
+    }
   },
   onShow() { 
     this.setData({
       hasList: true      // 既然有数据了，那设为true吧
-    });
+    })
     this.getTotalPrice()
   },
 
